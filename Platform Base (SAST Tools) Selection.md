@@ -10,14 +10,14 @@
 
 ​	We list the SAST tools from different sources as follows:
 
-#### NIST(2):
+#### NIST[1] (2):
 
 |      | Tool Name   | Notes                                                        | Resource                                                     |
 | ---- | ----------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | 1    | OVERSECURED | Oversecured, a mobile app vulnerability scanner, designed for DevOps process integration, that is built to protect customers' privacy and defend their devices against modern threats.Available for iOS/Android apps | https://oversecured.com/                                     |
 | 2    | Veracode    | Rapidly find and fix vulnerabilities with real-time feedback and reduce flaws introduced in new code by up to 60% with IDE scans | https://www.veracode.com/products/binary-static-analysis-sast |
 
-#### Gartner(22):
+#### Gartner[2] (22):
 
 |      | Tool Name                             | Notes                                                        | Resource                                                     |
 | ---- | ------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -43,7 +43,7 @@
 | 21   | AppSonar                              | AppSonar is a security testing software that helps improve the security and quality of your applicationThe test rules are based on industry standards including but not limited to OWASP Top 10, CWE/SANS-25 and NIST. | https://www.appsonar.com/                                    |
 | 22   | Appsweep                              | Quickly find & solve security issues in your mobile app’s code and dependencies, based on security standards (e.g. OWASP MASVS ). Actionable recommendations enable quick resolution, keeping launches on time and on budget. And it is free. | https://appsweep.guardsquare.com/                            |
 
-#### Ranganath(11):
+#### Ranganath[3] (7):
 
 |      | Tool Name  | Notes                                                        | Resource                                                     |
 | ---- | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -52,14 +52,20 @@
 | 3    | Qark       | QARK can look for security related Android application vulnerabilities with source code and packaged APKs as input. QARK provides the ability to create 'Proof-of-Concept' deployable APKs and/or ADB commands, capable of exploiting many of the vulnerabilities it finds, which can help verify potential vulnerabilities it detects. | https://github.com/linkedin/qark                             |
 | 4    | JAADAS     | JAADAS is a Joint Advanced Defect Assessment framework for Android applications which provides inter-procedure and intra-procedure static analysis for Android applications. | https://github.com/flankerhqd/JAADAS                         |
 | 5    | Marvin     | Marvin static analyzer is an Android application vulnerability scanning tool.  The Marvin tool utilizes the Androguard and Static Android Analysis Framework (SAAF) frameworks. | https://github.com/programa-stic/Marvin-static-Analyzer      |
-| 6    | FlowDroid  | FlowDroid statically computes data flows in Android apps and Java programs.But assumes that the entire contents remain tainted, even if an untainted value overwrites the single array element. | PLDI‘14, FlowDroid: Precise Context, Flow, Field, Object-sensitive and Lifecycle-aware Taint Analysis for Android Apps |
-| 7    | IccTA      | IccTA can detecting inter-component privacy leaks in Android app | ICSE'15, Detecting Inter-Component Privacy Leaks in Android Apps |
-| 8    | AmanDroid  | Ability to analyse the inter-component data low for security vetting.Unable to detect security issues where exceptions can occur and unable to handle relections and concurrency. | TOPS'18, Amandroid: A precise and general inter-component data flow analysis framework for security vetting of android apps, |
-| 9    | DroidSafe  | DroidSafe is a static application analysis tool designed to analyze malicious information flows in Android source code and APK files. | [NDSS'15, Information flow analysis of android applications in droidsafe;   https://github.com/MIT-PAC/droidsafe-src](https://github.com/MIT-PAC/droidsafe-src) |
-| 10   | FixDroid   | FixDroid is an Android Studio plugin. As long as FixDroid is installed, it will keep providing you with helpful security alerts, explanations and quick fixes whenever possible | CCS'17, A stitch in time: Supporting android developers in writing secure code |
-| 11   | SMV-Hunter | a system for the automatic, large-scale identification of such vulnerabilities that combines both static and dynamic analysis. | NDSS'14, Smv-hunter: Large scale, automated detection of ssl/tls man-in-the-middle vulnerabilities in android apps |
+| 6    | IccTA      | IccTA can detecting inter-component privacy leaks in Android app | ICSE'15, Detecting Inter-Component Privacy Leaks in Android Apps |
+| 7    | SMV-Hunter | a system for the automatic, large-scale identification of such vulnerabilities that combines both static and dynamic analysis. | NDSS'14, Smv-hunter: Large scale, automated detection of ssl/tls man-in-the-middle vulnerabilities in android apps |
 
-#### Senanayake(5):
+#### Reaves[4] (3):
+
+|      | Tool Name | Notes                                                        | Resource                                                     |
+| ---- | --------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 1    | AmanDroid | Ability to analyse the inter-component data low for security vetting.Unable to detect security issues where exceptions can occur and unable to handle relections and concurrency. | TOPS'18, Amandroid: A precise and general inter-component data flow analysis framework for security vetting of android apps, |
+| 2    | DroidSafe | DroidSafe is a static application analysis tool designed to analyze malicious information flows in Android source code and APK files. | [NDSS'15, Information flow analysis of android applications in droidsafe;   https://github.com/MIT-PAC/droidsafe-src](https://github.com/MIT-PAC/droidsafe-src) |
+| 3    | FixDroid  | FixDroid is an Android Studio plugin. As long as FixDroid is installed, it will keep providing you with helpful security alerts, explanations and quick fixes whenever possible | CCS'17, A stitch in time: Supporting android developers in writing secure code |
+
+
+
+#### Senanayake[5] (5):
 
 |      | Tool Name  | Notes                                                        | Resource                                                     |
 | ---- | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -69,14 +75,20 @@
 | 4    | COVERT     | Ability to perform compositional analysis of inter-app vulnerabilities.Unable to identify native code-related vulnerabilities and Permission leakages. | TSE'15, COVERT: Compositional Analysis of Android Inter-App Permission Leakage |
 | 5    | CogniCrypt | CrySL [13] is a domain-specific language for cryptographic libraries.The static analysis CogniCryptSAST takes the rules provided in the specification language CrySL as input, and performs a static analysis based on the specification of the rules. | [ECOOP'18, CrySL: An Extensible Approach to Validating the Correct Usage of Cryptographic APIs;  https://github.com/CROSSINGTUD/CryptoAnalysis](https://github.com/CROSSINGTUD/CryptoAnalysis) |
 
-#### Chen(2):
+#### Zhang[6] (1):
+
+|      | Tool Name     | Notes                                                        | Resource                                                     |
+| ---- | ------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 1    | **FlowDroid** | FlowDroid statically computes data flows in Android apps and Java programs.But assumes that the entire contents remain tainted, even if an untainted value overwrites the single array element. | PLDI‘14, FlowDroid: Precise Context, Flow, Field, Object-sensitive and Lifecycle-aware Taint Analysis for Android Apps |
+
+#### Chen[7] (2):
 
 |      | Tool Name | Notes                                                        | Resource                                                     |
 | ---- | --------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | 1    | AUSERA    | AUSERA is an automated security risk assessment tool for Android application vulnerability detection. It uses static program analysis, such as data flow and control flow analysis, sensitive data labeling, function identification, etc., to automatically detect vulnerabilities in Android applications | ASE'22, AUSERA: Automated Security Vulnerability Detection for Android Apps; https://github.com/tjusenchen/AUSERA |
 | 2    | SUPER     | SUPER is a command line application which look for security related vulnerabilities for Android applications. RUST is used as its programming language, and therefore the tool can be extended. In addition, because it is a modular writing rules, so the user can customize the rules. | https://github.com/SUPERAndroidAnalyzer/super                |
 
-#### Others(1):
+#### Others (1):
 
 |      | Tool Name | Notes                                                        | Resource                                       |
 | ---- | --------- | ------------------------------------------------------------ | ---------------------------------------------- |
@@ -191,8 +203,28 @@
 | 1    | AUSERA    | √                              | √                                   | √                                                  |
 | 2    | Androbugs | √                              | √                                   | √                                                  |
 | 3    | MobSF     | √                              | √                                   | √                                                  |
-| 4    | Qark      | √                              | √                                   | √                                                  |
+| 4    | QARK      | √                              | √                                   | √                                                  |
 | 5    | SUPER     | √                              | √                                   | √                                                  |
 | 6    | JAADAS    | √                              | √                                   | √                                                  |
 | 7    | Marvin    | √                              | √                                   | √                                                  |
 | 8    | SPECK     | √                              | √                                   | √                                                  |
+
+
+
+
+
+### REFERENCES
+
+[1] NIST. 2023. Source Code Security Analyzers | NIST. https://www.nist.gov/itl/ssd/software-quality-group/source-code-security-analyzers. (Accessed on 07/19/2023).
+
+[2] Gartner. 2023. Best Mobile App Security Testing Tools Reviews 2023 | Gartner Peer Insights. https://www.gartner.com/reviews/market/mobile-application-security-testing. (Accessed on 07/19/2023)
+
+[3] Venkatesh-Prasad Ranganath and Joydeep Mitra. 2020. Are free Android app security analysis tools effective in detecting known vulnerabilities?Empirical Software Engineering 25 (2020), 178–219.
+
+[4] Bradley Reaves, Jasmine Bowers, Sigmund Albert Gorski III, Olabode Anise, Rahul Bobhate, Raymond Cho, Hiranava Das, Sharique Hussain, Hamza Karachi-wala, Nolen Scaife, et al. 2016. * droid: Assessment and evaluation of android application analysis tools. ACM Computing Surveys (CSUR) 49, 3 (2016), 1–30.
+
+[5] Janaka Senanayake, Harsha Kalutarage, Mhd Omar Al-Kadri, Andrei Petrovski, and Luca Piras. 2023. Android source code vulnerability detection: a systematic literature review. Comput. Surveys 55, 9 (2023), 1–37.
+
+[6] Junbin Zhang, Yingying Wang, Lina Qiu, and Julia Rubin. 2021. Analyzing Android taint analysis tools: FlowDroid, Amandroid, and DroidSafe. IEEE Trans-actions on Software Engineering 48, 10 (2021), 4014–4040.
+
+[7] Sen Chen, Yuxin Zhang, Lingling Fan, Jiaming Li, and Yang Liu. 2022. Ausera: Automated security vulnerability detection for Android apps. In Proceedings of the 37th IEEE/ACM International Conference on Automated Software Engineering. 1–5.
