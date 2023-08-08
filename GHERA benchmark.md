@@ -1,8 +1,8 @@
 # GHERA benchmark
 
-​	By referring to the evaluation and comparison results in [1], we choose GHERA [2] as one synthetic benchmark because it is more comprehensive than others by maintaining more vulnerability types. Moreover, it also provides both the vulnerable version and the corresponding fixed version.
+​By referring to the evaluation and comparison results in [1], we choose GHERA [2] as one synthetic benchmark because it is more comprehensive than others by maintaining more vulnerability types. Moreover, it also provides both the vulnerable version and the corresponding fixed version.
 
-​	According to the type of vulnerability supported by GHERA and the type of vulnerability supported by 8 selected tools, we show the detailed information of the type of vulnerability corresponding to the tool detection capability in GHERA. 
+​According to the type of vulnerability supported by GHERA and the type of vulnerability supported by 8 selected tools, we show detailed information on the type of vulnerability corresponding to the tool detection capability in GHERA. 
 
 |                                                         | The selected groudtruth label                | Overlapped or Unique? |
 | ------------------------------------------------------- | -------------------------------------------- | --------------------- |
