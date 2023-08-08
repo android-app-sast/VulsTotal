@@ -94,11 +94,11 @@
 | ---- | --------- | ------------------------------------------------------------ | ---------------------------------------------- |
 | 1    | SPECK     | SPECK is a tool for searching for multiple bad codes in Android applications. From the Android documentation, developers extracted a set of rules to follow to improve app security. It performs static analysis by viewing the application source code to detect rule violations. | https://github.com/SPRITZ-Research-Group/SPECK |
 
-​	We obtained a total of 43 SAST tools through the above sources.
+​We obtained a total of 43 SAST tools through the above sources.
 
 ### Tools Selection:
 
-​	To facilitate the selection and comparison of Android SAST tools for our study, we then designed 3 selection criteria as follows:
+​To facilitate the selection and comparison of Android SAST tools for our study, we then designed 3 selection criteria as follows:
 
 - Free of charge and transparent; 
 - Generalized vulnerability detection; 
@@ -152,7 +152,7 @@
 | 42   | COVERT                                | √                              | ×                                   | √                                                  |
 | 43   | CogniCrypt                            | √                              | ×                                   | √                                                  |
 
-In terms of 'Free of charge and transparent', the Android SAST tools must be free of charge. While commercial tools are indeed prevalent in the industry, they often entail substantial costs, which would be prohibitive for our large-scale experiment. Additionally, since we try to explore the internal implementation of the tool candidates, we filtered out 24 tools that are not transparent or free such as Quixxi, ImmuniWeb, and Checkmarx SAST. 
+In terms of "Free of charge and transparent", the Android SAST tools must be free of charge. While commercial tools are indeed prevalent in the industry, they often entail substantial costs, which would be prohibitive for our large-scale experiment. Additionally, since we try to explore the internal implementation of the tool candidates, we filtered out 24 tools that are not transparent or free such as Quixxi, ImmuniWeb, and Checkmarx SAST. 
 
 ​The remaining 19 SAST tools are as follows:
 
