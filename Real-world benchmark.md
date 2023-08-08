@@ -4,7 +4,7 @@
 
 ## customized/granularity-aware majority voting-100%
 
-all vuln types number = 37
+all vul types number = 37
 
 min_apk_set_len = 19
 
