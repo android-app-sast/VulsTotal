@@ -2,7 +2,7 @@
 
 ​The details of the three real-world benchmarks we built are shown in the following table. In order to better show the vulnerabilities in each sample APK, we number the vulnerabilities based on the types of vulnerabilities in the unified taxonomy and identify the vulnerabilities in the sample APK with the number.
 
-## customized/granularity-aware majority voting-100%
+## Customized/Granularity-aware majority voting-100%
 
 all vul types number = 37
 
@@ -32,7 +32,7 @@ min_apk_set_len = 19
 
 
 
-## customized majority voting-50%
+## Customized majority voting-50%
 
 all vul types number = 49
 
@@ -60,7 +60,7 @@ min_apk_set len: 17
 
 
 
-## granularity-aware majority voting-50%
+## Granularity-aware majority voting-50%
 
 all vul types number = 46
 
