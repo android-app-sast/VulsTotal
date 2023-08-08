@@ -1,6 +1,6 @@
 # Fine-grained Granularity 
 
-​	According to our analysis, there are a total of 13 types of vulnerabilities with different tool detection granularity, and we divide them into three categories according to their specific conditions.
+According to our analysis, there are 13 vulnerability types with different tool detection granularity, and we divide them into three categories according to their specific conditions.
 
 ​	a. For most data disclosure types (7.41%, 4/54) in the vulnerability category of “Sensitive Data Disclosure Risks” like “Logging Data Disclosure” and “SMS Data Disclosure”, SUPER and MobSF rely on simple pattern matching for vulnerable APIs without confirming the sensitivity of the leaked data. In contrast, AUSERA adds custom sensitive data labels to validate sensitivity after matching leak APIs like *Log.e()* and *sendTextMessage()*
 
@@ -8,7 +8,7 @@
 
 ​	c. For vulnerabilities with multiple vulnerable APIs involving the same vulnerability type, differences manifest in tools omitting certain vulnerable APIs from the analysis. For example, most tools only check for AES encryption misuse via *Cipher.getInstance(“AES/ECB”)*, while ignoring the implementation of *Cipher.getInstance (“AES”)* also uses the parameters *“AES/ECB/PKCS5padding”.* There are 4 types of vulnerability type in this case, accounting for 7.41% (4/54)
 
-​	We show the specific types of vulnerabilities and the details of their categories in the following table.
+​We show the specific types of vulnerabilities and the details of their categories in the following table.
 
 | Vul Typ                                | QARK | AndroBugs | JAADAS | Marvine | SUPER | MobSF | SPECK | AUSERA | Categories |
 | -------------------------------------- | ---- | --------- | ------ | ------- | ----- | ----- | ----- | ------ | ---------- |
