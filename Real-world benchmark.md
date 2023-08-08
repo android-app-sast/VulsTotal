@@ -34,7 +34,7 @@ min_apk_set_len = 19
 
 ## customized majority voting-50%
 
-all vuln types number = 49
+all vul types number = 49
 
 min_apk_set len: 17
 
@@ -62,7 +62,7 @@ min_apk_set len: 17
 
 ## granularity-aware majority voting-50%
 
-all vuln types number = 46
+all vul types number = 46
 
 min_apk_set_len = 16
 
