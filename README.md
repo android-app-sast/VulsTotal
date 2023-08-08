@@ -59,6 +59,24 @@ Since the platform integrates the detection capabilities of 8 tools, we need to 
 
 Note that please use the installation packages of the 8 tools provided with this project, as the tools have been modified to varying degrees to accommodate the platform
 
+### The Usage of VulsTotal 
+
+```
+usage: python VulsTotal.py [-h] -d APK_FOLDER -r REPORT_FOLDER -c CSV_FOLDER -s STRATEGY -f CONFIDENCE
+
+VulsTotal - A Unified Platform for Evaluating and Benchmarking SAST Tools for Android
+
+optional arguments:
+  -h, 	--help            	show this help message and exit
+  -d, 	--apk_folder  		The APK folder stored the target APKs
+  -r,	--report_folder 	The report folder stored the intermediate reports
+  -c, 	--CSV_folder 	 	The CSV folder stored the final CSV reports
+  -s, 	--strategy  		The strategy option(0:customized majority voting; 1:granularity-aware majority voting)
+  -f, 	--confidence  		The confidence option(please in the number in [50,100)
+```
+
+
+
 ### Development Environment
 
 Using Python 2.7 in VulsTotal
