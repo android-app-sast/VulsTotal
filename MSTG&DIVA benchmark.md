@@ -1,8 +1,8 @@
 # MSTG&DIVA Benchmark
 
-​	Many industry companies and institutions developed insecure apps by manually injecting vulnerabilities. From this side, we take MSTG app and DIVA app into account, where MSTG is maintained by OWASP and the latter one is developed by an industry company named Payatu. The MSTG serves as a comprehensive resource for mobile app security testing, providing valuable insights into identifying and addressing potential vulnerabilities. Meanwhile, the DIVA app showcases real-world security issues and serves as an educational tool to enhance app developers' understanding of secure coding practices.
+​Many industry companies and institutions developed insecure apps by manually injecting vulnerabilities. From this side, we take the MSTG app and DIVA app into account, where MSTG is maintained by OWASP and the latter is developed by an industry company named Payatu. The MSTG serves as a comprehensive resource for mobile app security testing, providing valuable insights into identifying and addressing potential vulnerabilities. Meanwhile, the DIVA app showcases real-world security issues and serves as an educational tool to enhance app developers' understanding of secure coding practices.
 
-​	According to the type of vulnerability supported by these two apps and the type of vulnerability supported by 8 selected tools, we show the detailed information of the type of vulnerability corresponding to the tool detection capability in MSTG&DIVA.
+​According to the type of vulnerability supported by these two apps and the type of vulnerability supported by 8 selected tools, we show detailed information on the type of vulnerability corresponding to the tool detection capability in MSTG&DIVA.
 
 | APK name | The selected groudtruth label         | Overlapped or Unique? |
 | -------- | ------------------------------------- | --------------------- |
