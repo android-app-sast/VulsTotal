@@ -1,14 +1,14 @@
 # Platform Base (SAST Tools) Selection
 
-​	To construct a unified platform and thoroughly evaluate the detection capabilities of Android SAST tools, we sought out a diverse set of SAST tools from both academic and industrial domains. 
+​To construct a unified platform and thoroughly evaluate the detection capabilities of Android SAST tools, we sought out a diverse set of SAST tools from both academic and industrial domains. 
 
-​	To gather this information, we primarily searched tools from recent literature and two prominent websites including NIST and Gartner. Then we snowballed from them since they also recommend further lists. 
+​To gather this information, we primarily searched tools from recent literature and two prominent websites including NIST and Gartner. Then we snowballed from them since they also recommend further lists. 
 
-​	After collating data from these diverse sources, we were able to identify 43 pertinent SAST tools in the domain of Android security, spanning both industry and academia. 
+​After collating data from these diverse sources, we were able to identify 43 pertinent SAST tools in the domain of Android security, spanning both industry and academia. 
 
 ### Tools Sources:
 
-​	We list the SAST tools from different sources as follows:
+​We list the SAST tools from different sources as follows:
 
 #### NIST[1] (2):
 
@@ -152,9 +152,9 @@
 | 42   | COVERT                                | √                              | ×                                   | √                                                  |
 | 43   | CogniCrypt                            | √                              | ×                                   | √                                                  |
 
-​	In terms of 'Free of charge and transparent', the Android SAST tools must be free of charge. While commercial tools are indeed prevalent in the industry, they often entail substantial costs, which would be prohibitive for our large-scale experiment. Additionally, since we try to explore the internal implementation of the tool candidates, we filtered out 24 tools that are not transparent or free such as Quixxi, ImmuniWeb, and Checkmarx SAST. 
+In terms of 'Free of charge and transparent', the Android SAST tools must be free of charge. While commercial tools are indeed prevalent in the industry, they often entail substantial costs, which would be prohibitive for our large-scale experiment. Additionally, since we try to explore the internal implementation of the tool candidates, we filtered out 24 tools that are not transparent or free such as Quixxi, ImmuniWeb, and Checkmarx SAST. 
 
-​	The remaining 19 SAST tools are as follows:
+​The remaining 19 SAST tools are as follows:
 
 |      | Tool Name  | Free of charge and transparent | Generalized vulnerability detection | Proven ability to detect synthetic vulnerabilities |
 | ---- | ---------- | ------------------------------ | ----------------------------------- | -------------------------------------------------- |
@@ -178,9 +178,9 @@
 | 18   | COVERT     | √                              | ×                                   | √                                                  |
 | 19   | CogniCrypt | √                              | ×                                   | √                                                  |
 
-​	In terms of 'Generalized vulnerability detection'. Since we aim to understand the extent of coverage for various types of vulnerabilities by current Android SAST tools. Thus, it is crucial that the selected tools can identify a wide range of Android vulnerabilities. Thus, we excluded 10 tools that are designed to detect specific vulnerability types, such as SMV-Hunter(detecting SSL/TLS MITM vulnerabilities), CogniCrypt (detecting vulnerable cryptographic API usage), and FlowDroid (Taint analysis). 
+​In terms of 'Generalized vulnerability detection'. Since we aim to understand the extent of coverage for various types of vulnerabilities by current Android SAST tools. Thus, it is crucial that the selected tools can identify a wide range of Android vulnerabilities. Thus, we excluded 10 tools that are designed to detect specific vulnerability types, such as SMV-Hunter(detecting SSL/TLS MITM vulnerabilities), CogniCrypt (detecting vulnerable cryptographic API usage), and FlowDroid (Taint analysis). 
 
-​	The remaining 9 SAST tools are as follows:
+​The remaining 9 SAST tools are as follows:
 
 |      | Tool Name | Free of charge and transparent | Generalized vulnerability detection | Proven ability to detect synthetic vulnerabilities |
 | ---- | --------- | ------------------------------ | ----------------------------------- | -------------------------------------------------- |
@@ -194,9 +194,9 @@
 | 8    | SPECK     | √                              | √                                   | √                                                  |
 | 9    | StaCoAn   | √                              | √                                   | ×                                                  |
 
-​	In terms of 'Proven ability to detect synthetic vulnerabilities'. To facilitate the comparison and evaluation of tool effectiveness between synthetic and real-world benchmarks, it is required that tools should demonstrate an ability to detect vulnerabilities in synthetic benchmarks such as GHERA, i.e., be able to detect at least one vulnerability type. Thus, we excluded Stacoan, which failed to identify any synthetic vulnerabilities. 
+​In terms of the 'Proven ability to detect synthetic vulnerabilities'. To facilitate the comparison and evaluation of tool effectiveness between synthetic and real-world benchmarks, it is required that tools should demonstrate an ability to detect vulnerabilities in synthetic benchmarks such as GHERA, i.e., be able to detect at least one vulnerability type. Thus, we excluded Stacoan, which failed to identify any synthetic vulnerabilities. 
 
-​	The final 8 selected SAST tools are as follows:
+​The final 8 selected SAST tools are as follows:
 
 |      | Tool Name | Free of charge and transparent | Generalized vulnerability detection | Proven ability to detect synthetic vulnerabilities |
 | ---- | --------- | ------------------------------ | ----------------------------------- | -------------------------------------------------- |
@@ -208,9 +208,6 @@
 | 6    | JAADAS    | √                              | √                                   | √                                                  |
 | 7    | Marvin    | √                              | √                                   | √                                                  |
 | 8    | SPECK     | √                              | √                                   | √                                                  |
-
-
-
 
 
 ### REFERENCES
