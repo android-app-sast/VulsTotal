@@ -10,14 +10,14 @@
 
 ​We list the SAST tools from different sources as follows:
 
-#### NIST[1] (2):
+#### NIST [1] (2):
 
 |      | Tool Name   | Notes                                                        | Resource                                                     |
 | ---- | ----------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | 1    | OVERSECURED | Oversecured, a mobile app vulnerability scanner, designed for DevOps process integration, that is built to protect customers' privacy and defend their devices against modern threats.Available for iOS/Android apps | https://oversecured.com/                                     |
 | 2    | Veracode    | Rapidly find and fix vulnerabilities with real-time feedback and reduce flaws introduced in new code by up to 60% with IDE scans | https://www.veracode.com/products/binary-static-analysis-sast |
 
-#### Gartner[2] (22):
+#### Gartner [2] (22):
 
 |      | Tool Name                             | Notes                                                        | Resource                                                     |
 | ---- | ------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -43,7 +43,7 @@
 | 21   | AppSonar                              | AppSonar is a security testing software that helps improve the security and quality of your applicationThe test rules are based on industry standards including but not limited to OWASP Top 10, CWE/SANS-25 and NIST. | https://www.appsonar.com/                                    |
 | 22   | Appsweep                              | Quickly find & solve security issues in your mobile app’s code and dependencies, based on security standards (e.g. OWASP MASVS ). Actionable recommendations enable quick resolution, keeping launches on time and on budget. And it is free. | https://appsweep.guardsquare.com/                            |
 
-#### Ranganath[3] (7):
+#### Ranganath [3] (7):
 
 |      | Tool Name  | Notes                                                        | Resource                                                     |
 | ---- | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -55,7 +55,7 @@
 | 6    | IccTA      | IccTA can detecting inter-component privacy leaks in Android app | ICSE'15, Detecting Inter-Component Privacy Leaks in Android Apps |
 | 7    | SMV-Hunter | a system for the automatic, large-scale identification of such vulnerabilities that combines both static and dynamic analysis. | NDSS'14, Smv-hunter: Large scale, automated detection of ssl/tls man-in-the-middle vulnerabilities in android apps |
 
-#### Reaves[4] (3):
+#### Reaves [4] (3):
 
 |      | Tool Name | Notes                                                        | Resource                                                     |
 | ---- | --------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -65,7 +65,7 @@
 
 
 
-#### Senanayake[5] (5):
+#### Senanayake [5] (5):
 
 |      | Tool Name  | Notes                                                        | Resource                                                     |
 | ---- | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -75,13 +75,13 @@
 | 4    | COVERT     | Ability to perform compositional analysis of inter-app vulnerabilities.Unable to identify native code-related vulnerabilities and Permission leakages. | TSE'15, COVERT: Compositional Analysis of Android Inter-App Permission Leakage |
 | 5    | CogniCrypt | CrySL [13] is a domain-specific language for cryptographic libraries.The static analysis CogniCryptSAST takes the rules provided in the specification language CrySL as input, and performs a static analysis based on the specification of the rules. | [ECOOP'18, CrySL: An Extensible Approach to Validating the Correct Usage of Cryptographic APIs;  https://github.com/CROSSINGTUD/CryptoAnalysis](https://github.com/CROSSINGTUD/CryptoAnalysis) |
 
-#### Zhang[6] (1):
+#### Zhang et al. [6] (1):
 
 |      | Tool Name     | Notes                                                        | Resource                                                     |
 | ---- | ------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | 1    | **FlowDroid** | FlowDroid statically computes data flows in Android apps and Java programs.But assumes that the entire contents remain tainted, even if an untainted value overwrites the single array element. | PLDI‘14, FlowDroid: Precise Context, Flow, Field, Object-sensitive and Lifecycle-aware Taint Analysis for Android Apps |
 
-#### Chen[7] (2):
+#### Chen et al. [7] (2):
 
 |      | Tool Name | Notes                                                        | Resource                                                     |
 | ---- | --------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
