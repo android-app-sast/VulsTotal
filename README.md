@@ -6,14 +6,14 @@ The platform combines the detection capability of 8 select SAST tools for Androi
 
 The 8 selected SAST tools for Android are:
 
-- QARK:[linkedin/qark: Tool to look for several security related Android application vulnerabilities (github.com)](https://github.com/linkedin/qark)
-- AndroBugs:[AndroBugs/AndroBugs_Framework: AndroBugs Framework is an efficient Android vulnerability scanner that helps developers or hackers find potential security vulnerabilities in Android applications. No need to install on Windows. (github.com)](https://github.com/AndroBugs/AndroBugs_Framework)
-- JAADAS:[flankerhqd/JAADAS: Joint Advanced Defect assEsment for android applications (github.com)](https://github.com/flankerhqd/JAADAS)
-- Marvin:[programa-stic/Marvin-static-Analyzer: Marvin static analyzer is an Android application vulnerability scanner. The framework uses androguard and Static Android Analysis Framework (SAAF). (github.com)](https://github.com/programa-stic/Marvin-static-Analyzer)
-- SUPER:[SUPERAndroidAnalyzer/super: Secure, Unified, Powerful and Extensible Rust Android Analyzer (github.com)](https://github.com/SUPERAndroidAnalyzer/super)
-- MobSF:[MobSF/Mobile-Security-Framework-MobSF: Mobile Security Framework (MobSF) is an automated, all-in-one mobile application (Android/iOS/Windows) pen-testing, malware analysis and security assessment framework capable of performing static and dynamic analysis. (github.com)](https://github.com/MobSF/Mobile-Security-Framework-MobSF)
-- SPECK:[SPRITZ-Research-Group/SPECK: SPECK: From Google Textual Guidelines to Automatic Detection of Android Apps Vulnerabilities (github.com)](https://github.com/SPRITZ-Research-Group/SPECK)
-- AUSERA:[tjusenchen/AUSERA: AUSERA: Automated Security Vulnerability Detection for Android Apps (github.com)](https://github.com/tjusenchen/AUSERA)
+- QARK: [linkedin/qark: Tool to look for several security related Android application vulnerabilities (github.com)](https://github.com/linkedin/qark)
+- AndroBugs: [AndroBugs/AndroBugs_Framework: AndroBugs Framework is an efficient Android vulnerability scanner that helps developers or hackers find potential security vulnerabilities in Android applications. No need to install on Windows. (github.com)](https://github.com/AndroBugs/AndroBugs_Framework)
+- JAADAS: [flankerhqd/JAADAS: Joint Advanced Defect assEsment for android applications (github.com)](https://github.com/flankerhqd/JAADAS)
+- Marvin: [programa-stic/Marvin-static-Analyzer: Marvin static analyzer is an Android application vulnerability scanner. The framework uses androguard and Static Android Analysis Framework (SAAF). (github.com)](https://github.com/programa-stic/Marvin-static-Analyzer)
+- SUPER: [SUPERAndroidAnalyzer/super: Secure, Unified, Powerful and Extensible Rust Android Analyzer (github.com)](https://github.com/SUPERAndroidAnalyzer/super)
+- MobSF: [MobSF/Mobile-Security-Framework-MobSF: Mobile Security Framework (MobSF) is an automated, all-in-one mobile application (Android/iOS/Windows) pen-testing, malware analysis and security assessment framework capable of performing static and dynamic analysis. (github.com)](https://github.com/MobSF/Mobile-Security-Framework-MobSF)
+- SPECK: [SPRITZ-Research-Group/SPECK: SPECK: From Google Textual Guidelines to Automatic Detection of Android Apps Vulnerabilities (github.com)](https://github.com/SPRITZ-Research-Group/SPECK)
+- AUSERA: [tjusenchen/AUSERA: AUSERA: Automated Security Vulnerability Detection for Android Apps (github.com)](https://github.com/tjusenchen/AUSERA)
 
 ## Our Goal
 
