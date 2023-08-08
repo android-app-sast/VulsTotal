@@ -1,4 +1,4 @@
-# Effectiveness  in Three Benchmarks 
+# Effectiveness on Three Benchmarks 
 
 ## GHERA
 
