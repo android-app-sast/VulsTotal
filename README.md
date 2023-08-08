@@ -48,7 +48,7 @@ The 8 selected SAST tools for Android are:
 
 ## The Benchmark Resources 
 
-The Real-World Benchmark constructed by VulsTotal and the CVE-based benchmark is available at https://zenodo.org/record/8224853
+The real-world benchmark constructed by VulsTotal and the CVE-based benchmark is available at https://zenodo.org/record/8224853
 
 This Zenodo dataset contains four benchmarks as follows:
 
@@ -61,9 +61,9 @@ This Zenodo dataset contains four benchmarks as follows:
 
 ## Configuration Platform VulsTotal 
 
-Since the platform integrates the detection capabilities of 8 tools, we need to install each of the 8 tools separately. Of course, we will optimize this feature to allow users to access the platform via web service.
+Since the platform integrates the detection capabilities of 8 tools, we need to install each of the 8 tools separately. We will optimize this feature to allow users to access the platform via a web service.
 
-Note that please use the installation packages of the 8 tools provided with this project, as the tools have been modified to varying degrees to accommodate the platform.
+Note that please use the installation packages of the 8 tools provided with this project, as the tools have been modified by us to varying degrees to accommodate the platform.
 
 ### The Usage of VulsTotal 
 
@@ -77,13 +77,7 @@ optional arguments:
   -d, 	--apk_folder  		The APK folder stored the target APKs
   -r,	--report_folder 	The report folder stored the intermediate reports
   -c, 	--CSV_folder 	 	The CSV folder stored the final CSV reports
-  -s, 	--strategy  		The strategy option(0:customized majority voting; 1:granularity-aware majority voting)
-  -f, 	--confidence  		The confidence option(please in the number in [50,100)
+  -s, 	--strategy  		The strategy option (0:customized majority voting; 1:granularity-aware majority voting)
+  -f, 	--confidence  		The confidence option (please in the number in [50,100)
 ```
-
-
-
-### Development Environment
-
-Using Python 2.7 in VulsTotal
 
