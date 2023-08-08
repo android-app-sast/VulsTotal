@@ -1,0 +1,66 @@
+Overlap for all tools !
+,QARK,AndroBugs,JAADAS,Marvin,SUPER,MobSF,SPECK,AUSERA,Sum_truth_overlap,theory_overlap,true_flag
+Logging data leakage,0/0,0/0,0/0,0/0,0/1,1/1,0/0,0/1,1,3,0
+SD card/Internal data leakage,0/0,1/1,0/0,0/0,0/1,1/1,1/1,0/1,3,5,0
+Using temp file issue,0/0,0/0,0/0,0/0,0/1,1/1,0/0,1/1,2,3,1
+SMS data leakage,0/0,0/1,0/0,0/0,0/1,0/1,0/1,0/1,0,5,0
+AES encryption misuse,0/0,0/0,0/0,0/1,0/1,0/1,0/1,0/1,0,5,0
+RSA encryption misuse,0/0,0/0,0/1,0/0,0/1,0/1,0/1,0/1,0,5,0
+Package hardcoded issue,0/1,0/0,0/0,0/0,0/1,0/1,0/0,0/1,0,4,0
+Use SQLCipher,0/0,0/1,0/0,0/0,0/0,0/1,0/0,0/0,0,2,0
+Weak iv,0/0,0/0,0/0,1/1,0/0,0/1,0/0,0/0,1,2,0
+Empty Pending Intent,1/1,0/0,0/0,0/0,0/0,0/0,0/0,1/1,2,2,1
+WebView setJSenabled execution,0/1,0/1,0/0,0/0,0/1,0/1,0/1,0/1,0,6,0
+WebView local file access,0/1,0/1,0/1,0/1,0/0,0/0,0/0,0/1,0,5,0
+Rooted device detection,0/0,0/1,0/0,0/0,0/1,0/1,0/0,0/0,0,3,0
+WebView password leakage,0/0,0/0,0/1,0/1,0/0,0/0,0/0,0/1,0,3,0
+IP Disclosure,0/0,0/0,0/0,0/0,0/1,0/1,0/0,0/0,0,2,0
+Device ID Disclosure,0/0,0/1,0/0,0/0,0/1,0/0,0/0,0/0,0,2,0
+Base64 encryption issue,0/0,0/1,0/0,0/0,0/1,0/0,0/0,1/1,1,3,0
+Blowfish encryption issue,0/0,0/0,0/0,0/0,0/0,0/1,0/0,0/1,0,2,0
+DES encryption misuse,0/0,0/0,0/0,0/1,0/1,0/1,0/1,0/1,0,5,0
+Insecure hash function,0/0,0/0,0/0,0/1,0/1,0/1,0/1,1/1,1,5,0
+Insecure SecureRandom issue,0/0,0/0,0/0,0/1,0/1,0/1,0/1,0/1,0,5,0
+Dynamically registered Receiver issue,0/0,0/0,0/0,1/1,0/0,0/0,0/0,0/1,1,2,0
+Implicit Intent issue,0/0,0/0,1/1,1/1,0/0,0/0,1/1,1/1,4,4,1
+Exported not protected components,1/1,1/1,0/0,1/1,1/1,1/1,1/1,1/1,7,7,1
+Exported not protected Content Provider,0/1,0/1,0/0,0/1,0/1,0/1,0/1,1/1,1,7,0
+Sticky broadcast intent,1/1,0/0,0/0,0/1,0/0,0/0,0/0,0/0,1,2,0
+improper provider permission,0/1,0/0,0/0,0/0,0/0,0/1,0/0,0/0,0,2,0
+Webview sop warning,0/1,0/0,0/1,0/0,0/0,0/0,0/0,0/0,0,2,0
+Webview invalid certificate authentication',0/0,0/1,0/1,0/1,0/1,0/1,0/0,0/1,0,6,0
+Webview addJSinterface code exec,0/1,0/1,0/1,0/1,0/1,0/1,0/1,0/0,0,7,0
+WebView setPluginState,0/1,0/0,0/0,0/0,0/0,0/0,0/0,0/1,0,2,0
+Sensitive functionality (getRuntime.exec),0/0,0/1,0/0,0/1,0/1,0/0,0/0,0/1,0,4,0
+Sensitive functionality (DexClassLoader),0/0,0/1,0/0,0/1,0/0,0/0,0/1,0/1,0,4,0
+Super user privileges,0/0,0/0,0/0,0/0,0/1,0/1,0/0,0/0,0,2,0
+Sensitive functionality (loadLibrary),0/0,0/1,0/0,0/0,0/0,0/0,0/0,0/1,0,2,0
+SQL injection,0/0,0/0,0/0,0/0,0/1,0/1,1/1,1/1,2,4,1
+Fragment injection,0/0,0/1,0/1,0/1,0/0,0/0,0/0,0/1,0,4,0
+ContentProvider openFile,0/0,0/0,0/0,0/1,0/0,0/0,0/0,0/1,0,2,0
+Use http issue,0/0,0/1,0/0,0/0,0/0,0/0,0/1,1/1,1,3,0
+ClearText Traffic,0/0,0/0,0/0,0/0,0/0,0/1,0/1,0/0,0,2,0
+Configure CAs for debuggding,0/0,0/0,0/0,0/0,0/0,0/1,0/1,0/0,0,2,0
+Use invalid certificate authentication,0/1,0/1,0/1,0/1,0/1,0/1,0/1,0/1,0,8,0
+Use SHA1_MD5 certificate,0/0,0/0,0/0,0/0,0/0,1/1,0/0,0/1,1,2,0
+Use expired certificates,0/0,0/0,0/0,0/0,0/1,0/0,0/0,0/1,0,2,0
+Use insecure socket,0/0,0/0,0/0,0/0,0/0,0/0,0/1,0/1,0,2,0
+Use insecure ssl socket factor,0/0,0/1,0/0,0/1,0/1,0/0,0/0,0/0,0,3,0
+Use invalid hostname verification,0/1,0/1,0/1,0/1,0/0,0/0,0/0,0/1,0,5,0
+Use invalid server verification,0/1,0/1,0/1,0/1,0/0,0/0,0/0,0/1,0,5,0
+bypass ssl pinning,0/0,0/1,0/0,0/0,0/0,0/1,0/0,0/0,0,2,0
+Screenshot harvest,0/0,1/1,0/0,0/0,0/0,1/1,0/0,1/1,3,3,1
+Backup issue,1/1,1/1,1/1,0/1,1/1,1/1,0/0,1/1,6,7,1
+Debug issue,0/1,0/1,0/1,0/1,0/1,0/1,0/0,0/1,0,7,0
+MODE READABLE,0/1,0/1,0/1,0/1,0/1,0/1,0/1,0/1,0,8,0
+MODE WRITABLE,0/1,0/1,0/1,0/1,0/1,0/1,0/1,0/1,0,8,0
+Uniqe items for all tools !
+,QARK,AndroBugs,JAADAS,Marvin,SUPER,MobSF,SPECK,AUSERA
+0,"Please use the exploit APK to manually test for TapJacking until we have a chance to complete this module. The impact should be verified manually anyway, so have fun...",FILE_DELETE,cast to Intent,,Internet permission,This application has no privacy trackers,Use intents to defer permissions,RSA encryption issue
+1,Logs are world readable on pre-4.1 devices. A malicious app could potentially retrieve sensitive data from the logs.,Security_Methods,,,Unknown permission,Found 3 critical permission(s),Access device encrypted storage,
+2,"Content Providers appear to be in use, locating...",HACKER_SIGNATURE_CHECK,,,Write external storage permission,Application vulnerable to Janus Vulnerability,Show an App Chooser,
+3,This class is exported from a manifest item: FireReceiver,Security_Classes,,,Read external storage permission,,Store only non-sensitive data in cache files,
+4,This class is exported from a manifest item: FsTileService,,,,Access coarse location permission,,,
+5,This class is exported from a manifest item: MainActivity,,,,,,,
+6,"Until we perfect this, for manually testing, run the following command to see all the options and their meanings: adb shell am. Make sure to update qark frequently to get all the enhancements! You'll also find some good examples here: http://xgouchet.fr/android/index.php?article42/launch-intents-using-adb",,,,,,,
+7,This class is exported from a manifest item: EditActivity,,,,,,,
