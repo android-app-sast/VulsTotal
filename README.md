@@ -44,8 +44,7 @@ The 8 selected SAST tools for Android are:
 
 ## The Benchmark Resources 
 
-The Real-World Benchmark constructed by VulsTotal and the CVE-based benchmark is available at [https://doi.org/10.5281/zenodo.8223173](https://zenodo.org/record/8223397)
-
+The Real-World Benchmark constructed by VulsTotal and the CVE-based benchmark is available at https://zenodo.org/record/8224853
 This Zenodo dataset contains four benchmarks as follows:
 
 1. customized_50: which applies customized majority voting with 50% confidence.
