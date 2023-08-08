@@ -1,6 +1,6 @@
-# Real-World Benchmark
+# Real-world Benchmark
 
-​	The details of the three real-world benchmarks we built are shown in the following table. In order to better show the vulnerabilities in each sample APK, we number the vulnerabilities based on the types of vulnerabilities in the unified taxonomy and identify the vulnerabilities in the sample APK with the number.
+​The details of the three real-world benchmarks we built are shown in the following table. In order to better show the vulnerabilities in each sample APK, we number the vulnerabilities based on the types of vulnerabilities in the unified taxonomy and identify the vulnerabilities in the sample APK with the number.
 
 ## customized/granularity-aware majority voting-100%
 
@@ -36,7 +36,7 @@ min_apk_set_len = 19
 
 all vuln types number = 49
 
-min_apk_set len : 17
+min_apk_set len: 17
 
 | Apk name                                                   |                                                              |
 | ---------------------------------------------------------- | ------------------------------------------------------------ |
