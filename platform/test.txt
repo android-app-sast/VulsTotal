@@ -1,0 +1,498 @@
+ERROR:root:Please specify source (--source=1 or --source==2)
+ERROR:root:Please specify source (--source=1 or --source==2)
+ERROR:root:--exploit flag missing. Possible values 0/1
+INFO:root:Initializing...
+DEBUG:root:Downloading:  https://dl.google.com/android/android-sdk_r24.0.2-macosx.zip 
+ FileName: android-sdk_r24.0.2-macosx.zip 
+ FileSize: 
+ 87262823
+INFO:modules.sdkManager:Done
+INFO:root:Initializing...
+INFO:root:Identified Android SDK installation from a previous run.
+INFO:root:Initializing QARK
+
+DEBUG:root:User selected APK %s/home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign.apk
+INFO:root:Unpacking /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign.apk
+INFO:root:Zipfile: <zipfile.ZipFile object at 0x7f768e701690>
+INFO:root:Extracted APK to /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/
+INFO:root:Finding AndroidManifest.xml in /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign
+INFO:root:AndroidManifest.xml found
+INFO:root:<?xml version="1.0" ?><manifest android:versionCode="1" android:versionName="1.0" package="edu.ksu.cs.benign" xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-sdk android:minSdkVersion="22" android:targetSdkVersion="27">
+</uses-sdk>
+<permission android:name="santos.benign.permission">
+</permission>
+<uses-permission android:name="santos.benign.permission">
+</uses-permission>
+<application android:allowBackup="false" android:debuggable="true" android:icon="@7F0A0000" android:label="@7F0B001D" android:supportsRtl="true" android:theme="@7F0C0005">
+<activity android:name="edu.ksu.cs.benign.MainActivity">
+<intent-filter>
+<action android:name="android.intent.action.MAIN">
+</action>
+<category android:name="android.intent.category.LAUNCHER">
+</category>
+</intent-filter>
+</activity>
+<service android:enabled="true" android:exported="true" android:name="edu.ksu.cs.benign.MyService">
+</service>
+<activity android:name="edu.ksu.cs.benign.SensitiveActivity">
+</activity>
+</application>
+</manifest>
+INFO:modules.DetermineMinSDK:Determined minimum SDK version to be:22
+ISSUES:root:APP COMPONENT ATTACK SURFACE
+INFO:modules.GeneralIssues:Backups not enabled.
+DEBUG:modules.GeneralIssues:A permission element is declared in the manifest without a protectionLevel specified. You should review this and ensure to set the proper protectionLevel: http://developer.android.com/guide/topics/manifest/permission-element.html#plevel
+POTENTIAL VULNERABILITY:root:The android:debuggable flag is manually set to true in the AndroidManifest.xml. This will cause your application to be debuggable in production builds and can result in data leakage and other security issues. It is not necessary to set the android:debuggable flag in the manifest, it will be set appropriately automatically by the tools. More info: http://developer.android.com/guide/topics/manifest/application-element.html#debug
+INFO:root:Checking provider
+INFO:root:Checking activity
+WARNING:root:The following activity are exported, but not protected by any permissions. Failing to protect activity could leave them vulnerable to attack by malicious apps. The activity should be reviewed for vulnerabilities, such as injection and information leakage.
+DEBUG:root:Not a valid type of object in terminalPrint extras
+INFO:root:Checking activity-alias
+INFO:root:Checking services
+WARNING:root:The following service are exported, but not protected by any permissions. Failing to protect service could leave them vulnerable to attack by malicious apps. The service should be reviewed for vulnerabilities, such as injection and information leakage.
+DEBUG:root:Not a valid type of object in terminalPrint extras
+INFO:root:Checking receivers
+INFO:root:Please wait while QARK tries to decompile the code back to source using multiple decompilers. This may take a while.
+INFO:root:Trying to improve accuracy of the decompiled files
+DEBUG:root:Failed to reconstruct: /android/support/v7/widget/ActivityChooserModel.java
+INFO:root:Restored 12 file(s) out of 13 corrupt file(s)
+DEBUG:root:Deleting redundant decompiled files
+DEBUG:root:Deleted /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/classes_dex2jar1
+DEBUG:root:Deleted /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/classes_dex2jar2
+INFO:root:Decompiled code found at:/home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/
+INFO:root:Finding all java files
+INFO:root:Running Static Code Analysis...
+INFO:root:Looking for private key files in project
+DEBUG:root:Checking for any broadcasts sent from this app......
+DEBUG:root:error: LexToken(*,'*',152,6627)
+DEBUG:root:error: LexToken(-,'-',152,6638)
+DEBUG:root:error: LexToken(*,'*',152,6627)
+DEBUG:root:error: LexToken(-,'-',152,6638)
+DEBUG:root:No type declarations: /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/classes_dex2jar/android/support/graphics/drawable/AnimationUtilsCompat.java
+DEBUG:root:error: LexToken(*,'*',152,6627)
+DEBUG:root:error: LexToken(-,'-',152,6638)
+DEBUG:root:error: LexToken(*,'*',152,6627)
+DEBUG:root:error: LexToken(-,'-',152,6638)
+DEBUG:root:error: LexToken(/,'/',71,2408)
+DEBUG:root:error: LexToken(/,'/',110,4189)
+DEBUG:root:error: LexToken(/,'/',71,2408)
+DEBUG:root:error: LexToken(/,'/',110,4189)
+DEBUG:root:error: LexToken(/,'/',71,2408)
+DEBUG:root:error: LexToken(/,'/',110,4189)
+DEBUG:root:No type declarations: /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/classes_dex2jar/android/support/v7/view/menu/MenuPopupHelper.java
+DEBUG:root:error: LexToken(/,'/',71,2408)
+DEBUG:root:error: LexToken(/,'/',110,4189)
+DEBUG:root:error: LexToken(*,'*',86,3461)
+DEBUG:root:error: LexToken(TRY,'try',87,3483)
+DEBUG:root:error: LexToken(/,'/',774,26126)
+DEBUG:root:error: LexToken(*,'*',86,3461)
+DEBUG:root:error: LexToken(TRY,'try',87,3483)
+DEBUG:root:findPending - recurse, can't find PendingIntent: VariableDeclaration(type=Type(name=Name(value='ViewGroup'), type_arguments=[], enclosed_in=None, dimensions=0), variable_declarators=[VariableDeclarator(variable=Variable(name='localViewGroup1', dimensions=0), initializer=Cast(target=Type(name=Name(value='ViewGroup'), type_arguments=[], enclosed_in=None, dimensions=0), expression=MethodInvocation(name='inflate', arguments=[Name(value='R.layout.abc_screen_simple_overlay_action_mode'), Literal(value='null')], type_arguments=[], target=Name(value='localLayoutInflater'))))], modifiers=[])
+DEBUG:root:error: LexToken(/,'/',774,26126)
+DEBUG:root:error: LexToken(NAME,'localTintContextWrapper1',94,2968)
+DEBUG:root:error: LexToken(*,'*',86,3461)
+DEBUG:root:error: LexToken(TRY,'try',87,3483)
+DEBUG:root:No type declarations: /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/classes_dex2jar/android/support/v7/app/AppCompatViewInflater.java
+DEBUG:root:error: LexToken(NAME,'bool2',124,3842)
+DEBUG:root:error: LexToken(FINALLY,'finally',47,1278)
+DEBUG:root:error: LexToken(*,'*',86,3461)
+DEBUG:root:error: LexToken(TRY,'try',87,3483)
+DEBUG:root:error: LexToken(;,';',226,8910)
+DEBUG:root:error: LexToken(/,'/',774,26126)
+DEBUG:root:No type declarations: /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/classes_dex2jar/android/support/v7/app/AlertController.java
+DEBUG:root:error: LexToken(;,';',114,3678)
+DEBUG:root:error: LexToken(+,'+',562,18996)
+DEBUG:root:error: LexToken(;,';',231,7770)
+DEBUG:root:error: LexToken(;,';',368,11356)
+DEBUG:root:error: LexToken(/,'/',774,26126)
+DEBUG:root:error: LexToken(NAME,'localTintContextWrapper1',94,2968)
+DEBUG:root:error: LexToken(NAME,'bool4',234,7684)
+DEBUG:root:error: LexToken(),')',440,13820)
+DEBUG:root:error: LexToken(NAME,'i19',439,12991)
+DEBUG:root:error: LexToken(NAME,'bool2',124,3842)
+DEBUG:root:error: LexToken(FINALLY,'finally',47,1278)
+DEBUG:root:error: LexToken(;,';',226,8910)
+DEBUG:root:error: LexToken(NAME,'localTintContextWrapper1',94,2968)
+DEBUG:root:No type declarations: /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/classes_dex2jar/android/support/v7/widget/TintContextWrapper.java
+DEBUG:root:error: LexToken(;,';',114,3678)
+DEBUG:root:error: LexToken(+,'+',562,18996)
+DEBUG:root:error: LexToken(;,';',231,7770)
+DEBUG:root:error: LexToken(;,';',189,8197)
+DEBUG:root:error: LexToken(+,'+',683,27289)
+DEBUG:root:error: LexToken(;,';',368,11356)
+DEBUG:root:error: LexToken(*,'*',134,5040)
+DEBUG:root:error: LexToken(NAME,'bool2',124,3842)
+DEBUG:root:error: LexToken(NAME,'lbl34',134,5069)
+DEBUG:root:No type declarations: /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/classes_dex2jar/android/support/v7/widget/DropDownListView.java
+DEBUG:root:error: LexToken(NAME,'localTintContextWrapper1',94,2968)
+DEBUG:root:error: LexToken(NAME,'bool4',234,7684)
+DEBUG:root:error: LexToken(),')',440,13820)
+DEBUG:root:error: LexToken(NAME,'i19',439,12991)
+DEBUG:root:error: LexToken(NAME,'l2',299,8369)
+DEBUG:root:error: LexToken(+,'+',400,11007)
+DEBUG:root:error: LexToken(NAME,'bool2',124,3842)
+DEBUG:root:error: LexToken(FINALLY,'finally',47,1278)
+DEBUG:root:No type declarations: /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/classes_dex2jar/android/support/v7/widget/AppCompatSeekBar.java
+DEBUG:root:error: LexToken(;,';',226,8910)
+DEBUG:root:No type declarations: /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/classes_dex2jar/android/support/v7/widget/ListPopupWindow.java
+DEBUG:root:error: LexToken(FINALLY,'finally',47,1278)
+DEBUG:root:error: LexToken(;,';',226,8910)
+DEBUG:root:error: LexToken(NAME,'i13',948,30877)
+DEBUG:root:error: LexToken(;,';',114,3678)
+DEBUG:root:error: LexToken(;,';',114,3678)
+DEBUG:root:error: LexToken(+,'+',562,18996)
+DEBUG:root:No type declarations: /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/classes_dex2jar/android/support/v7/widget/ActivityChooserModel.java
+DEBUG:root:error: LexToken(+,'+',562,18996)
+DEBUG:root:error: LexToken(;,';',231,7770)
+DEBUG:root:error: LexToken(;,';',189,8197)
+DEBUG:root:error: LexToken(+,'+',683,27289)
+DEBUG:root:error: LexToken(;,';',231,7770)
+DEBUG:root:error: LexToken(*,'*',134,5040)
+DEBUG:root:error: LexToken(NAME,'lbl34',134,5069)
+DEBUG:root:No type declarations: /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/classes_dex2jar/android/support/v7/widget/ActionBarContextView.java
+DEBUG:root:error: LexToken(;,';',368,11356)
+DEBUG:root:error: LexToken(CATCH,'catch',217,8750)
+DEBUG:root:error: LexToken(NAME,'bool4',234,7684)
+DEBUG:root:error: LexToken(),')',440,13820)
+DEBUG:root:error: LexToken(;,';',368,11356)
+DEBUG:root:error: LexToken(NAME,'i19',439,12991)
+DEBUG:root:No type declarations: /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/classes_dex2jar/android/support/v7/widget/ActionBarOverlayLayout.java
+DEBUG:root:error: LexToken(NAME,'l2',299,8369)
+DEBUG:root:error: LexToken(+,'+',400,11007)
+DEBUG:root:error: LexToken(NAME,'arrayOfInt2',142,4852)
+DEBUG:root:error: LexToken(),')',151,5264)
+DEBUG:root:error: LexToken(NAME,'bool4',234,7684)
+DEBUG:root:error: LexToken(),')',440,13820)
+DEBUG:root:No type declarations: /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/classes_dex2jar/android/support/v7/widget/ActionMenuPresenter.java
+DEBUG:root:error: LexToken(NULL,'null',1,2)
+DEBUG:root:error: LexToken(NAME,'i13',948,30877)
+DEBUG:root:findPending - recurse, can't find PendingIntent: VariableDeclaration(type=Type(name=Name(value='ViewParent'), type_arguments=[], enclosed_in=None, dimensions=0), variable_declarators=[VariableDeclarator(variable=Variable(name='localViewParent', dimensions=0), initializer=MethodInvocation(name='getParent', arguments=[], type_arguments=[], target=Name(value='paramView')))], modifiers=[])
+DEBUG:root:error: LexToken(NAME,'i19',439,12991)
+DEBUG:root:error: LexToken(;,';',189,8197)
+DEBUG:root:error: LexToken(+,'+',683,27289)
+DEBUG:root:error: LexToken(*,'*',134,5040)
+DEBUG:root:error: LexToken(NAME,'lbl34',134,5069)
+DEBUG:root:No type declarations: /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/classes_dex2jar/android/support/v7/widget/LinearLayoutCompat.java
+DEBUG:root:error: LexToken(NAME,'j',223,6243)
+DEBUG:root:error: LexToken(LTEQ,'<=',232,6462)
+DEBUG:root:error: LexToken(LTEQ,'<=',232,6493)
+DEBUG:root:error: LexToken(CATCH,'catch',217,8750)
+DEBUG:root:error: LexToken(-,'-',614,18788)
+DEBUG:root:error: LexToken(;,';',614,18814)
+DEBUG:root:error: LexToken(+,'+',615,18850)
+DEBUG:root:error: LexToken(;,';',615,18876)
+DEBUG:root:error: LexToken(;,';',631,19287)
+DEBUG:root:error: LexToken(;,';',632,19335)
+DEBUG:root:error: LexToken(+,'+',635,19446)
+DEBUG:root:error: LexToken(;,';',635,19473)
+DEBUG:root:error: LexToken(-,'-',636,19513)
+DEBUG:root:error: LexToken(;,';',636,19540)
+DEBUG:root:error: LexToken(+,'+',637,19580)
+DEBUG:root:error: LexToken(;,';',637,19607)
+DEBUG:root:error: LexToken(/,'/',639,19747)
+DEBUG:root:error: LexToken(+,'+',745,23496)
+DEBUG:root:error: LexToken(),')',745,23540)
+DEBUG:root:error: LexToken(NAME,'l2',299,8369)
+DEBUG:root:error: LexToken(+,'+',400,11007)
+DEBUG:root:error: LexToken(*,'*',123,4518)
+DEBUG:root:findPending - recurse, can't find PendingIntent: VariableDeclaration(type=Type(name=Name(value='Context'), type_arguments=[], enclosed_in=None, dimensions=0), variable_declarators=[VariableDeclarator(variable=Variable(name='localContext', dimensions=0), initializer=MethodInvocation(name='getContext', arguments=[], type_arguments=[], target=Name(value='paramView')))], modifiers=[])
+DEBUG:root:error: LexToken(},'}',124,4539)
+DEBUG:root:error: LexToken(*,'*',84,3503)
+DEBUG:root:error: LexToken(CATCH,'catch',85,3533)
+DEBUG:root:error: LexToken(NAME,'arrayOfInt2',142,4852)
+DEBUG:root:error: LexToken(),')',151,5264)
+DEBUG:root:error: LexToken(;,';',189,8197)
+DEBUG:root:error: LexToken(+,'+',683,27289)
+DEBUG:root:No type declarations: /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/classes_dex2jar/android/support/v7/widget/AppCompatDrawableManager.java
+DEBUG:root:error: LexToken(NAME,'i13',948,30877)
+DEBUG:root:error: LexToken(*,'*',134,5040)
+DEBUG:root:error: LexToken(NAME,'lbl34',134,5069)
+DEBUG:root:error: LexToken(NULL,'null',1,2)
+DEBUG:root:No type declarations: /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/classes_dex2jar/android/support/v7/widget/AppCompatSpinner.java
+DEBUG:root:error: LexToken(CATCH,'catch',217,8750)
+DEBUG:root:error: LexToken(NUM,'.2.',154,5622)
+DEBUG:root:error: LexToken(NAME,'l2',299,8369)
+DEBUG:root:error: LexToken(+,'+',400,11007)
+DEBUG:root:No type declarations: /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/classes_dex2jar/android/support/v7/widget/ActionMenuView.java
+DEBUG:root:error: LexToken(NAME,'j',223,6243)
+DEBUG:root:error: LexToken(LTEQ,'<=',232,6462)
+DEBUG:root:error: LexToken(LTEQ,'<=',232,6493)
+DEBUG:root:error: LexToken(-,'-',614,18788)
+DEBUG:root:error: LexToken(;,';',614,18814)
+DEBUG:root:error: LexToken(+,'+',615,18850)
+DEBUG:root:error: LexToken(;,';',615,18876)
+DEBUG:root:error: LexToken(;,';',631,19287)
+DEBUG:root:error: LexToken(;,';',632,19335)
+DEBUG:root:error: LexToken(+,'+',635,19446)
+DEBUG:root:error: LexToken(;,';',635,19473)
+DEBUG:root:error: LexToken(-,'-',636,19513)
+DEBUG:root:error: LexToken(;,';',636,19540)
+DEBUG:root:error: LexToken(+,'+',637,19580)
+DEBUG:root:error: LexToken(;,';',637,19607)
+DEBUG:root:error: LexToken(/,'/',639,19747)
+DEBUG:root:error: LexToken(+,'+',745,23496)
+DEBUG:root:error: LexToken(),')',745,23540)
+DEBUG:root:error: LexToken(NAME,'arrayOfInt2',142,4852)
+DEBUG:root:error: LexToken(),')',151,5264)
+DEBUG:root:error: LexToken(NAME,'localFragmentContainerTransition4',238,6359)
+DEBUG:root:error: LexToken(*,'*',123,4518)
+DEBUG:root:error: LexToken(},'}',124,4539)
+DEBUG:root:error: LexToken(NAME,'i13',948,30877)
+DEBUG:root:error: LexToken(*,'*',84,3503)
+DEBUG:root:error: LexToken(CATCH,'catch',85,3533)
+DEBUG:root:No type declarations: /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/classes_dex2jar/android/support/v7/widget/Toolbar.java
+DEBUG:root:error: LexToken(NAME,'i3',114,4479)
+DEBUG:root:error: LexToken(NUM,'.2.',110,2994)
+DEBUG:root:error: LexToken(NULL,'null',1,2)
+DEBUG:root:error: LexToken(NAME,'i4',573,15883)
+DEBUG:root:error: LexToken(),')',885,24339)
+DEBUG:root:error: LexToken(),')',956,26597)
+DEBUG:root:error: LexToken(;,';',7,189)
+DEBUG:root:error: LexToken(;,';',18,600)
+DEBUG:root:error: LexToken(),')',41,1541)
+DEBUG:root:error: LexToken(),')',42,1605)
+DEBUG:root:error: LexToken(},'}',318,9129)
+DEBUG:root:error: LexToken(},'}',320,9256)
+DEBUG:root:error: LexToken(+,'+',324,9369)
+DEBUG:root:error: LexToken(),')',336,9792)
+DEBUG:root:error: LexToken(),')',336,9819)
+DEBUG:root:error: LexToken(),')',337,9861)
+DEBUG:root:error: LexToken(),')',337,9888)
+DEBUG:root:error: LexToken(CATCH,'catch',217,8750)
+DEBUG:root:No type declarations: /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/classes_dex2jar/android/support/v7/widget/SuggestionsAdapter.java
+DEBUG:root:error: LexToken(NAME,'j',223,6243)
+DEBUG:root:error: LexToken(LTEQ,'<=',232,6462)
+DEBUG:root:error: LexToken(LTEQ,'<=',232,6493)
+DEBUG:root:error: LexToken(-,'-',614,18788)
+DEBUG:root:error: LexToken(;,';',614,18814)
+DEBUG:root:error: LexToken(+,'+',615,18850)
+DEBUG:root:error: LexToken(;,';',615,18876)
+DEBUG:root:error: LexToken(;,';',631,19287)
+DEBUG:root:error: LexToken(;,';',632,19335)
+DEBUG:root:error: LexToken(+,'+',635,19446)
+DEBUG:root:error: LexToken(;,';',635,19473)
+DEBUG:root:error: LexToken(-,'-',636,19513)
+DEBUG:root:error: LexToken(;,';',636,19540)
+DEBUG:root:error: LexToken(+,'+',637,19580)
+DEBUG:root:error: LexToken(;,';',637,19607)
+DEBUG:root:error: LexToken(/,'/',639,19747)
+DEBUG:root:error: LexToken(+,'+',745,23496)
+DEBUG:root:error: LexToken(),')',745,23540)
+DEBUG:root:error: LexToken(NAME,'arrayOfInt2',142,4852)
+DEBUG:root:error: LexToken(),')',151,5264)
+DEBUG:root:No type declarations: /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/classes_dex2jar/android/support/v7/content/res/AppCompatColorStateListInflater.java
+DEBUG:root:error: LexToken(*,'*',123,4518)
+DEBUG:root:error: LexToken(},'}',124,4539)
+DEBUG:root:error: LexToken(*,'*',84,3503)
+DEBUG:root:error: LexToken(CATCH,'catch',85,3533)
+DEBUG:root:error: LexToken(NUM,'.2.',154,5622)
+DEBUG:root:error: LexToken(NULL,'null',1,2)
+DEBUG:root:No type declarations: /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/classes_dex2jar/android/support/v4/view/AbsSavedState.java
+DEBUG:root:error: LexToken(NAME,'$SwitchMap$android$arch$lifecycle$Lifecycle$State',64,2449)
+DEBUG:root:error: LexToken({,'{',16,353)
+DEBUG:root:error: LexToken(NAME,'$SwitchMap$android$arch$lifecycle$Lifecycle$Event',15,414)
+DEBUG:root:error: LexToken(NAME,'localFragmentContainerTransition4',238,6359)
+DEBUG:root:error: LexToken(NAME,'i3',114,4479)
+DEBUG:root:error: LexToken(NUM,'.2.',110,2994)
+DEBUG:root:error: LexToken(NAME,'i4',573,15883)
+DEBUG:root:error: LexToken(NAME,'j',223,6243)
+DEBUG:root:error: LexToken(LTEQ,'<=',232,6462)
+DEBUG:root:error: LexToken(LTEQ,'<=',232,6493)
+DEBUG:root:error: LexToken(),')',885,24339)
+DEBUG:root:error: LexToken(),')',956,26597)
+DEBUG:root:error: LexToken(-,'-',614,18788)
+DEBUG:root:error: LexToken(;,';',614,18814)
+DEBUG:root:error: LexToken(+,'+',615,18850)
+DEBUG:root:error: LexToken(;,';',615,18876)
+DEBUG:root:error: LexToken(;,';',631,19287)
+DEBUG:root:error: LexToken(;,';',632,19335)
+DEBUG:root:error: LexToken(+,'+',635,19446)
+DEBUG:root:error: LexToken(;,';',635,19473)
+DEBUG:root:error: LexToken(-,'-',636,19513)
+DEBUG:root:error: LexToken(;,';',636,19540)
+DEBUG:root:error: LexToken(+,'+',637,19580)
+DEBUG:root:error: LexToken(;,';',637,19607)
+DEBUG:root:error: LexToken(/,'/',639,19747)
+DEBUG:root:error: LexToken(+,'+',745,23496)
+DEBUG:root:error: LexToken(),')',745,23540)
+DEBUG:root:error: LexToken(;,';',7,189)
+DEBUG:root:No type declarations: /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/classes_dex2jar/android/support/v4/graphics/PathParser.java
+DEBUG:root:error: LexToken(;,';',18,600)
+DEBUG:root:error: LexToken(),')',41,1541)
+DEBUG:root:error: LexToken(),')',42,1605)
+DEBUG:root:error: LexToken(},'}',318,9129)
+DEBUG:root:error: LexToken(},'}',320,9256)
+DEBUG:root:error: LexToken(+,'+',324,9369)
+DEBUG:root:error: LexToken(),')',336,9792)
+DEBUG:root:error: LexToken(),')',336,9819)
+DEBUG:root:error: LexToken(),')',337,9861)
+DEBUG:root:error: LexToken(),')',337,9888)
+DEBUG:root:error: LexToken(NUM,'.2.',154,5622)
+DEBUG:root:error: LexToken(*,'*',123,4518)
+DEBUG:root:error: LexToken(},'}',124,4539)
+DEBUG:root:No type declarations: /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/classes_dex2jar/android/support/v4/graphics/TypefaceCompatBaseImpl.java
+DEBUG:root:error: LexToken(*,'*',84,3503)
+DEBUG:root:error: LexToken(CATCH,'catch',85,3533)
+DEBUG:root:No type declarations: /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/classes_dex2jar/android/support/v4/graphics/TypefaceCompatApi26Impl.java
+DEBUG:root:error: LexToken(NAME,'localFragmentContainerTransition4',238,6359)
+DEBUG:root:error: LexToken(NAME,'i3',114,4479)
+DEBUG:root:error: LexToken(NUM,'.2.',110,2994)
+DEBUG:root:error: LexToken(NAME,'i4',573,15883)
+DEBUG:root:error: LexToken(),')',885,24339)
+DEBUG:root:error: LexToken(),')',956,26597)
+DEBUG:root:error: LexToken(;,';',7,189)
+DEBUG:root:error: LexToken(;,';',18,600)
+DEBUG:root:error: LexToken(),')',41,1541)
+DEBUG:root:error: LexToken(),')',42,1605)
+DEBUG:root:error: LexToken(},'}',318,9129)
+DEBUG:root:error: LexToken(},'}',320,9256)
+DEBUG:root:error: LexToken(+,'+',324,9369)
+DEBUG:root:error: LexToken(),')',336,9792)
+DEBUG:root:error: LexToken(),')',336,9819)
+DEBUG:root:error: LexToken(),')',337,9861)
+DEBUG:root:error: LexToken(),')',337,9888)
+DEBUG:root:error: LexToken(NAME,'$SwitchMap$android$arch$lifecycle$Lifecycle$State',64,2449)
+DEBUG:root:error: LexToken({,'{',16,353)
+DEBUG:root:error: LexToken(NAME,'$SwitchMap$android$arch$lifecycle$Lifecycle$Event',15,414)
+DEBUG:root:findPending - recurse, can't find PendingIntent: VariableDeclaration(type=Type(name=Name(value='Object'), type_arguments=[], enclosed_in=None, dimensions=0), variable_declarators=[VariableDeclarator(variable=Variable(name='localObject', dimensions=0), initializer=MethodInvocation(name='getParentActivityIntent', arguments=[FieldAccess(name='mSourceContext', target='this'), Name(value='paramComponentName')], type_arguments=[], target=Name(value='NavUtils')))], modifiers=[])
+DEBUG:root:error: LexToken(NUM,'.2.',154,5622)
+DEBUG:root:No type declarations: /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/classes_dex2jar/android/support/v4/app/FragmentManagerImpl.java
+DEBUG:root:error: LexToken(NAME,'localFragmentContainerTransition4',238,6359)
+DEBUG:root:error: LexToken(NAME,'$SwitchMap$android$arch$lifecycle$Lifecycle$State',64,2449)
+DEBUG:root:No type declarations: /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/classes_dex2jar/android/support/v4/app/FragmentTransition.java
+DEBUG:root:error: LexToken({,'{',16,353)
+DEBUG:root:error: LexToken(NAME,'i3',114,4479)
+DEBUG:root:No type declarations: /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/classes_dex2jar/android/support/v4/provider/FontsContractCompat.java
+DEBUG:root:error: LexToken(NAME,'$SwitchMap$android$arch$lifecycle$Lifecycle$Event',15,414)
+DEBUG:root:error: LexToken(NUM,'.2.',110,2994)
+DEBUG:root:No type declarations: /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/classes_dex2jar/android/support/v4/provider/SelfDestructiveThread.java
+DEBUG:root:error: LexToken(NAME,'i4',573,15883)
+DEBUG:root:error: LexToken(),')',885,24339)
+DEBUG:root:error: LexToken(),')',956,26597)
+DEBUG:root:No type declarations: /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/classes_dex2jar/android/support/v4/widget/NestedScrollView.java
+DEBUG:root:error: LexToken(;,';',7,189)
+DEBUG:root:No type declarations: /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/classes_dex2jar/android/support/v4/widget/AutoSizeableTextView.java
+DEBUG:root:error: LexToken(;,';',18,600)
+DEBUG:root:error: LexToken(),')',41,1541)
+DEBUG:root:error: LexToken(),')',42,1605)
+DEBUG:root:error: LexToken(},'}',318,9129)
+DEBUG:root:error: LexToken(},'}',320,9256)
+DEBUG:root:error: LexToken(+,'+',324,9369)
+DEBUG:root:error: LexToken(),')',336,9792)
+DEBUG:root:error: LexToken(),')',336,9819)
+DEBUG:root:error: LexToken(),')',337,9861)
+DEBUG:root:error: LexToken(),')',337,9888)
+DEBUG:root:No type declarations: /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/classes_dex2jar/android/support/v4/widget/AutoScrollHelper.java
+DEBUG:root:findPending - recurse, can't find PendingIntent: VariableDeclaration(type=Type(name=Name(value='Entry'), type_arguments=[], enclosed_in=None, dimensions=0), variable_declarators=[VariableDeclarator(variable=Variable(name='localEntry', dimensions=0), initializer=FieldAccess(name='mStart', target='this'))], modifiers=[])
+DEBUG:root:error: LexToken(NAME,'$SwitchMap$android$arch$lifecycle$Lifecycle$State',64,2449)
+DEBUG:root:No type declarations: /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/classes_dex2jar/android/arch/lifecycle/LifecycleRegistry.java
+DEBUG:root:error: LexToken({,'{',16,353)
+DEBUG:root:No type declarations: /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/classes_dex2jar/android/arch/lifecycle/Lifecycle.java
+DEBUG:root:error: LexToken(NAME,'$SwitchMap$android$arch$lifecycle$Lifecycle$Event',15,414)
+DEBUG:root:No type declarations: /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/classes_dex2jar/android/arch/lifecycle/FullLifecycleObserverAdapter.java
+INFO:modules.findMethods:This class is exported from a manifest item: MainActivity
+INFO:root:Checking this file for vulns: /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/classes_dex2jar/edu/ksu/cs/benign/MainActivity.java
+DEBUG:root:--Found entry point: onCreate
+DEBUG:root:--Found entry point: onResume
+DEBUG:root:Walking the class!
+DEBUG:root:Parsing local method declarations
+DEBUG:root:Parsing external method declarations
+INFO:root:No custom imports to investigate. The method is assumed to be in the standard libraries
+DEBUG:root:Parsing local method declarations
+DEBUG:root:Parsing external method declarations
+INFO:root:No custom imports to investigate. The method is assumed to be in the standard libraries
+DEBUG:root:Parsing local method declarations
+DEBUG:root:Parsing external method declarations
+INFO:root:No custom imports to investigate. The method is assumed to be in the standard libraries
+DEBUG:root:Parsing local method declarations
+DEBUG:root:Parsing external method declarations
+INFO:root:No custom imports to investigate. The method is assumed to be in the standard libraries
+DEBUG:root:Parsing local method declarations
+DEBUG:root:Parsing external method declarations
+INFO:root:No custom imports to investigate. The method is assumed to be in the standard libraries
+DEBUG:root:Parsing local method declarations
+DEBUG:root:Parsing external method declarations
+INFO:root:No custom imports to investigate. The method is assumed to be in the standard libraries
+DEBUG:root:Parsing local method declarations
+DEBUG:root:Parsing external method declarations
+INFO:root:No custom imports to investigate. The method is assumed to be in the standard libraries
+DEBUG:root:Parsing local method declarations
+DEBUG:root:Parsing external method declarations
+INFO:root:No custom imports to investigate. The method is assumed to be in the standard libraries
+DEBUG:root:Parsing local method declarations
+DEBUG:root:Parsing external method declarations
+INFO:root:No custom imports to investigate. The method is assumed to be in the standard libraries
+INFO:modules.findMethods:This class is exported from a manifest item: MyService
+INFO:root:Checking this file for vulns: /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/classes_dex2jar/edu/ksu/cs/benign/MyService.java
+DEBUG:root:--Found entry point: onBind
+DEBUG:root:--Found entry point: onStartCommand
+DEBUG:root:Walking the class!
+DEBUG:root:NOT COVERED IN TOKEN MAPPER: 
+DEBUG:root:<class 'lib.plyj.model.Throw'>
+DEBUG:root:Throw(exception=InstanceCreation(type=Type(name=Name(value='UnsupportedOperationException'), type_arguments=[], enclosed_in=None, dimensions=0), type_arguments=[], arguments=[Literal(value='"Not yet implemented"')], body=[], enclosed_in=None))
+DEBUG:root:[]
+DEBUG:root:Parsing local method declarations
+DEBUG:root:Parsing external method declarations
+INFO:root:No custom imports to investigate. The method is assumed to be in the standard libraries
+DEBUG:root:Parsing local method declarations
+DEBUG:root:Parsing external method declarations
+INFO:root:No custom imports to investigate. The method is assumed to be in the standard libraries
+DEBUG:root:Parsing local method declarations
+DEBUG:root:Parsing external method declarations
+INFO:root:No custom imports to investigate. The method is assumed to be in the standard libraries
+DEBUG:root:Parsing local method declarations
+DEBUG:root:Parsing external method declarations
+INFO:root:No custom imports to investigate. The method is assumed to be in the standard libraries
+DEBUG:root:Parsing local method declarations
+DEBUG:root:Parsing external method declarations
+INFO:root:No custom imports to investigate. The method is assumed to be in the standard libraries
+DEBUG:root:Parsing local method declarations
+DEBUG:root:Parsing external method declarations
+INFO:root:No custom imports to investigate. The method is assumed to be in the standard libraries
+DEBUG:root:Parsing local method declarations
+DEBUG:root:Parsing external method declarations
+INFO:root:No custom imports to investigate. The method is assumed to be in the standard libraries
+DEBUG:root:Parsing local method declarations
+DEBUG:root:Parsing external method declarations
+INFO:root:No custom imports to investigate. The method is assumed to be in the standard libraries
+DEBUG:root:Parsing local method declarations
+DEBUG:root:Parsing external method declarations
+INFO:root:No custom imports to investigate. The method is assumed to be in the standard libraries
+DEBUG:root:Parsing local method declarations
+DEBUG:root:Parsing external method declarations
+INFO:root:No custom imports to investigate. The method is assumed to be in the standard libraries
+DEBUG:root:Parsing local method declarations
+DEBUG:root:Parsing external method declarations
+INFO:root:No custom imports to investigate. The method is assumed to be in the standard libraries
+DEBUG:root:Parsing local method declarations
+DEBUG:root:Parsing external method declarations
+INFO:root:No custom imports to investigate. The method is assumed to be in the standard libraries
+DEBUG:root:Parsing local method declarations
+DEBUG:root:Parsing external method declarations
+INFO:root:No custom imports to investigate. The method is assumed to be in the standard libraries
+DEBUG:root:Parsing local method declarations
+DEBUG:root:Parsing external method declarations
+INFO:root:No custom imports to investigate. The method is assumed to be in the standard libraries
+DEBUG:root:TAINTED <class 'lib.plyj.model.Name'>: Name(value='paramIntent')
+DEBUG:root:TAINTED: Return(result=MethodInvocation(name='onStartCommand', arguments=[Name(value='paramIntent'), Name(value='paramInt1'), Name(value='paramInt2')], type_arguments=[], target='super'))
+ISSUES:root:CRYPTO ISSUES
+INFO:root: No issues to report
+ISSUES:root:BROADCAST ISSUES
+INFO:root: No issues to report
+ISSUES:root:CERTIFICATE VALIDATION ISSUES
+INFO:root: No issues to report
+ISSUES:root:PENDING INTENT ISSUES
+INFO:root: No issues to report
+ISSUES:root:FILE PERMISSION ISSUES
+INFO:root: No issues to report
+ISSUES:root:WEB-VIEW ISSUES
+INFO:root:FOUND 0 WEBVIEWS:
+DEBUG:root:Beginning TapJacking testing
+WARNING:root:Please use the exploit APK to manually test for TapJacking until we have a chance to complete this module. The impact should be verified manually anyway, so have fun...
+ISSUES:root:ADB EXPLOIT COMMANDS
+INFO:root:Until we perfect this, for manually testing, run the following command to see all the options and their meanings: adb shell am. Make sure to update qark frequently to get all the enhancements! You'll also find some good examples here: http://xgouchet.fr/android/index.php?article42/launch-intents-using-adb
+DEBUG:root:No extras found in /home/dell/zjy/GHERA/CheckCallingOrSelfPermission-PrivilegeEscalation-Lean-benign/classes_dex2jar/edu/ksu/cs/benign/MainActivity.java to suggest.
+
+INFO:root:Support for other component types and dynamically adding extras is in the works, please check for updates
+ERROR:root:Please specify source (--source=1 or --source==2)
