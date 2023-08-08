@@ -42,7 +42,7 @@ The 8 selected SAST tools for Android are:
 
 ## The Benchmark Resources 
 
-The Real-World Benchmark constructed by VulsTotal and the CVE-based benchmark is available at https://doi.org/10.5281/zenodo.8223173
+The Real-World Benchmark constructed by VulsTotal and the CVE-based benchmark is available at [https://doi.org/10.5281/zenodo.8223173](https://zenodo.org/record/8223397)
 
 This Zenodo dataset contains four benchmarks as follows:
 
