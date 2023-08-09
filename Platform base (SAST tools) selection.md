@@ -55,7 +55,7 @@
 | 6    | IccTA      | IccTA can detecting inter-component privacy leaks in Android app | ICSE'15, Detecting Inter-Component Privacy Leaks in Android Apps |
 | 7    | SMV-Hunter | a system for the automatic, large-scale identification of such vulnerabilities that combines both static and dynamic analysis. | NDSS'14, Smv-hunter: Large scale, automated detection of ssl/tls man-in-the-middle vulnerabilities in android apps |
 
-#### Reaves [4] (3):
+#### Reaves et al. [4] (3):
 
 |      | Tool Name | Notes                                                        | Resource                                                     |
 | ---- | --------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -65,7 +65,7 @@
 
 
 
-#### Senanayake [5] (5):
+#### Senanayake et al. [5] (5):
 
 |      | Tool Name  | Notes                                                        | Resource                                                     |
 | ---- | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
