@@ -1,19 +1,23 @@
 # VulsTotal
 
-VulsTotal: A Unified Platform for Evaluating and Benchmarking SAST Tools for Android.
+VulsTotal: A Unified Platform for Evaluating SAST Tools for Android.
 
-The platform combines the detection capability of 8 select SAST tools for Android and finally generates a comprehensive detection report (CSV file) for the target APK.
+The platform combines the detection capability of 11 select SAST tools for Android and finally generates a comprehensive detection report (CSV file) for the target APK.
 
-The 8 selected SAST tools for Android are:
+The 11 selected SAST tools for Android are:
 
+- [MobSF](https://github.com/MobSF/Mobile-Security-Framework-MobSF)
 - [QARK](https://github.com/linkedin/qark)
 - [AndroBugs](https://github.com/AndroBugs/AndroBugs_Framework)
-- [JAADAS](https://github.com/flankerhqd/JAADAS)
-- [Marvin](https://github.com/programa-stic/Marvin-static-Analyzer)
+- [APKHunt](https://github.com/Cyber-Buddy/APKHunt)
 - [SUPER](https://github.com/SUPERAndroidAnalyzer/super)
-- [MobSF](https://github.com/MobSF/Mobile-Security-Framework-MobSF)
-- [SPECK](https://github.com/SPRITZ-Research-Group/SPECK)
+- [JAADAS](https://github.com/flankerhqd/JAADAS)
+- [DroidStatx](https://github.com/clviper/droidstatx)
+- [Marvin](https://github.com/programa-stic/Marvin-static-Analyzer)
+- [Trueseeing](https://github.com/alterakey/trueseeing)
 - [AUSERA](https://github.com/tjusenchen/AUSERA)
+- [SPECK](https://github.com/SPRITZ-Research-Group/SPECK)
+
 
 ## Our Goal
 
