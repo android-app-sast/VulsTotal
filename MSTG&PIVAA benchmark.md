@@ -1,4 +1,4 @@
-# MSTG&DIVA Benchmark
+# MSTG&PIVAA Benchmark
 
 Many industry companies and institutions developed insecure apps by manually injecting vulnerabilities. From this side, we take the MSTG app and PIVAA app into account, where MSTG is maintained by OWASP and the latter one is developed by an industry company named High-Tech Bridge. The MSTG serves as a comprehensive resource for mobile app security testing, providing valuable insights into identifying and addressing potential vulnerabilities. Meanwhile, the PIVAA app showcases real-world security issues and serves as an educational tool to enhance app developers' understanding of secure coding practices.
 
