@@ -48,7 +48,7 @@ The 11 selected SAST tools for Android are:
 
 ## The Benchmark Resources 
 
-The CVE-based benchmark is available at https://zenodo.org/record/8224853
+The CVE-based benchmark is available at https://zenodo.org/records/10428695
 
 
 
