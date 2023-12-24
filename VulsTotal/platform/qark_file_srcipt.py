@@ -3,6 +3,8 @@ import operator
 import os
 import logging
 import traceback
+# from common_logger import logger
+from util import logger
 
 def qark_data_pro(qark_report_path):
     f = open(qark_report_path, 'r')
@@ -35,6 +37,7 @@ def qark_data_pro(qark_report_path):
     return qark_report_1
 
 def qark_file_change(apk_folder, apk_report_folder):
+    logger.info(' [QARK] QARK reports process. ')
     apk_name = os.listdir(apk_folder)
     for i in reversed(range(len(apk_name))):
         if not (apk_name[i].split('.')[-1] == 'apk'):
@@ -50,6 +53,6 @@ def qark_file_change(apk_folder, apk_report_folder):
             with open (qark_vlun_file,'w+') as f:
                 f.write(str(qark_vlun_single))
         except Exception as e:
-            logging.critical('[qark] something wrong happend !'+str(apk_name[i])+" "+str(e))
-            traceback.print_exc()
+            logger.critical('\033[1;31m [QARK] something wrong happend !'+str(apk_name[i])+"")
+            # traceback.print_exc()
 

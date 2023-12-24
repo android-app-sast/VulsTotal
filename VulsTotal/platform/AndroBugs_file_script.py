@@ -5,16 +5,20 @@ import logging
 import subprocess
 import copy
 import traceback
+# from common_logger import logger
+from util import logger
+
 
 def AndroBugs_file_change(androbugs_apks_folder,androbugs_report_folder):
-    logging.info('Now begin to scan apks using [Androbugs] !')
-    current_folder = os.path.dirname(os.getcwd())
+    logger.info(' [AndroBugs] Now begin to scan apks using [AndroBugs] !')
+    current_folder = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     androbugs_massive = os.path.join(current_folder,'AndroBugs_Framework/AndroBugs_MassiveAnalysis.py')
     androbugs_cmd = 'python ' + androbugs_massive + ' -b 20221105  -e 2 -t 01 -d '+ androbugs_apks_folder + ' -o '+androbugs_report_folder
-    print(androbugs_cmd)
+    print('androbugs_cmd=='+androbugs_cmd)
     p = subprocess.Popen(androbugs_cmd,stdout=subprocess.PIPE,stderr=subprocess.PIPE,stdin=subprocess.PIPE,shell=True)
     (output,err) = p.communicate()
-    logging.info('Androbugs scanning is finished ! ')
+    
+    logger.info(' [AndroBugs] AndroBugs scanning is finished ! ')
     
     androbugs_apks = os.listdir(androbugs_apks_folder)
     androbugs_apks.sort()
@@ -33,8 +37,8 @@ def AndroBugs_file_change(androbugs_apks_folder,androbugs_report_folder):
                 with open (ausera_desc_file,'w+') as f:
                     f.write(str(androbugs_singe_desc_))
         except Exception as e:
-            logging.critical("[Androbugs]something happened __"+apkname+'_'+repr(e))
-            traceback.print_exc()
+            logger.critical("\033[1;31m [AndroBugs] something happened in "+apkname+'')
+            # traceback.print_exc()
 
 def AndroBugs_data_Pro(androbugs_file_path):
     pattern = re.compile('\[.*?\].*?\(Vector ID:.*?\)')

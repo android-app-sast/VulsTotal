@@ -173,13 +173,13 @@ def vlun_valid(rules_singe,vuln_name,vuln_desc,tool_vuln, tool_desc):
         for key,content in rules_singe.items():
             if(key == vuln_name):
                 if(len(content)==1):
-                    match = re.search(content[0],tool_vuln)
+                    match = re.search(content[0],tool_vuln,re.IGNORECASE)
                     if match:
                         if(vuln_desc in rules_singe.keys()):
                             pattern  = rules_singe[vuln_desc]
                             if(len(pattern)== 1):
                                 for a in range(len(tool_desc)):
-                                    match_desc = re.search(pattern[0],tool_desc[a])
+                                    match_desc = re.search(pattern[0],tool_desc[a],re.IGNORECASE)
                                     if(match_desc):
                                         single_vuln = rules_singe["title"]
                                         break
@@ -188,7 +188,7 @@ def vlun_valid(rules_singe,vuln_name,vuln_desc,tool_vuln, tool_desc):
                                 match_desc_list = []
                                 for a in range(len(tool_desc)):
                                     for j in range(length-1):
-                                        match_desc = re.search(pattern[j+1],tool_desc[a])
+                                        match_desc = re.search(pattern[j+1],tool_desc[a],re.IGNORECASE)
                                         if(match_desc):
                                             match_desc_list.append(1)
                                         else:
@@ -203,7 +203,7 @@ def vlun_valid(rules_singe,vuln_name,vuln_desc,tool_vuln, tool_desc):
                     length = len(content)
                     match_list = []
                     for j in range(length-1):
-                        match = re.search(content[j+1],tool_vuln)
+                        match = re.search(content[j+1],tool_vuln,re.IGNORECASE)
                         if(match):
                             match_list.append(1)
                         else:
@@ -221,6 +221,7 @@ def corresponding(tool_name,tool_vuln,tool_uniqe,rules,tool_desc=[]):
         vuln_list = []
         flag = 0
         # print('==========='+tool_vuln)
+        
         if(tool_name == "AUSERA"):
             for i in range(len(rules)):
                 single_vuln = vlun_valid(rules[i],"AUSERA","AUSERA_desc",tool_vuln, tool_desc)
@@ -276,7 +277,28 @@ def corresponding(tool_name,tool_vuln,tool_uniqe,rules,tool_desc=[]):
                 vuln_list.append(single_vuln)
                 if single_vuln != "NULL":
                     flag = flag +1 
+        
+        elif(tool_name == "APKHunt"):
+            for i in range(len(rules)):
+                single_vuln = vlun_valid(rules[i],"APKHunt","APKHunt_desc",tool_vuln, tool_desc)
+                vuln_list.append(single_vuln)
+                if single_vuln != "NULL":
+                    flag = flag +1 
+        
+        elif(tool_name == "Trueseeing"):
+            for i in range(len(rules)):
+                single_vuln = vlun_valid(rules[i],"Trueseeing","Trueseeing_desc",tool_vuln, tool_desc)
+                vuln_list.append(single_vuln)
+                if single_vuln != "NULL":
+                    flag = flag +1 
 
+        elif(tool_name == "Droidstatx"):
+            for i in range(len(rules)):
+                single_vuln = vlun_valid(rules[i],"Droidstatx","Droidstatx_desc",tool_vuln, tool_desc)
+                vuln_list.append(single_vuln)
+                if single_vuln != "NULL":
+                    flag = flag +1 
+        
         if (flag == 0):
             tool_uniqe = tool_vuln
         vuln_list = list(set(vuln_list))

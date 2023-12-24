@@ -5,6 +5,19 @@ import subprocess
 import logging
 import shutil
 import traceback
+# from common_logger import logger
+from util import logger
+
+def AUSERA_file_del(ausera_main_apks):
+    logger.info( ' [AUSERA] Del the apks in [AUSERA] folder.')
+    apks = os.listdir(ausera_main_apks)
+    for i in reversed(range(len(apks))):
+        if ('.apk' in apks[i]):
+            the_apk_path = os.path.join(ausera_main_apks,apks[i])
+            os.remove(the_apk_path)
+
+
+
 
 
 def AUSERA_file_change(ausera_engine_report, apks_file, ausera_main_apks):
@@ -20,7 +33,7 @@ def AUSERA_file_change(ausera_engine_report, apks_file, ausera_main_apks):
 
     for apk in apks:
         try:
-            logging.debug('Now state a new target path for apk:' + apk)
+            logger.info(' [AUSERA] Now state a new target path for apk: ' + apk)
             apk_path = os.path.join(ausera_main_apks, apk)
             apk_name = os.path.splitext(apk)[0]
             target_folder = os.path.join(apks_file, apk_name)
@@ -44,15 +57,16 @@ def AUSERA_file_change(ausera_engine_report, apks_file, ausera_main_apks):
             target_apk_report_file.append(target_report_url)
             orginal_apk_report_file.append(orginal_report_url)
         except Exception as e:
-            logging.critical('[Ausera] [AUSERA_file_change] wrong in '+str(apk)+'___'+repr(e))
+            logger.critical(' \033[1;31m[AUSERA] [AUSERA_file_change] wrong in '+str(apk)+'\033[0m')
     
-    current_folder = os.path.dirname(os.getcwd())
+    current_folder = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     ausera_apk_engine = os.path.join(current_folder,'ausera-main/apk-engine.py') 
     ausera_main = os.path.join(current_folder,'ausera-main/')
     ausera_android_platforms = os.path.join(current_folder,'ausera-main/engine-configuration/libs/android-platforms/') 
 
-    logging.info('Now begin to scan apks using [AUSERA]: ')
+    logger.info(' [AUSERA] Now begin to scan apks using [AUSERA] ')
     AUSERA_cmd = 'python2.7 '+ ausera_apk_engine +' ' + ausera_main + ' /usr/local/java/jdk1.8.0_333/ ' + ausera_android_platforms 
+    print('AUSERA_cmd:==='+AUSERA_cmd)
 
     p = subprocess.Popen(AUSERA_cmd,
                          stdout=subprocess.PIPE,
@@ -61,14 +75,16 @@ def AUSERA_file_change(ausera_engine_report, apks_file, ausera_main_apks):
                          shell=True)
     p.communicate()
     
-    logging.info('AUSERA scanning is finished ! ')
+    logger.info(' [AUSERA] AUSERA scanning is finished ! ')
     
     for i in range(len(target_apk_report_file)):
         try:
             shutil.copyfile(orginal_apk_report_file[i], target_apk_report_file[i])
         except Exception as e:
-            logging.critical('[Ausera] file process wrong in '+str(target_apk_report_file[i]))
-    
+            logger.critical(' \033[1;31m [AUSERA] file process wrong in '+str(target_apk_report_file[i]) + '\033[0m')
+
+    AUSERA_file_del(ausera_main_apks)
+
     return target_apk_report_file
     
 
@@ -107,5 +123,6 @@ def AUSERA_file(apk_report_file):
             with open (ausera_desc_file,'w+') as f:
                 f.write(str(AUSERA_desc_fin))
         except Exception as e:
-            logging.critical("something happened in scanning ausera !"+repr(e)+"____"+str(apk_report_file[i]))
+            logger.critical(" \033[1;31m[AUSERA] something happened in scanning AUSERA in "+str(apk_report_file[i])+"\033[0m]")
+
 

@@ -11,6 +11,9 @@ import traceback
 import unicodedata
 import shutil
 import time
+# from common_logger import logger
+from util import logger
+
 
 reload(sys)
 sys.setdefaultencoding('utf8')
@@ -62,10 +65,10 @@ def apk_file_change(apk_scan_file, super_report_folder, apk_target_folder):
     pattern1 = re.compile('manifest package: (\S+)*')
     pattern = re.compile('manifest package: \S')
     super_report_path_total = []
-    
+    logger.info(' [SUPER] Now begin to scan apks using [SUPER] !')
     for i in range(len(apk_abs_path)):
         try:
-            logging.info('SUPER scanning :' + str(i + 1) +'/'+ str(len(apk_abs_path)))
+            logger.info(' [SUPER] Scanning process: ' + str(i + 1) +'/'+ str(len(apk_abs_path)) +' : '+ str(os.path.basename(apk_abs_path[i])))
             super_cmd = 'super-analyzer   --json ' + apk_abs_path[i]
             startTime = time.time()
             p = subprocess.Popen(super_cmd,
@@ -76,17 +79,21 @@ def apk_file_change(apk_scan_file, super_report_folder, apk_target_folder):
             (output, err) = p.communicate()
             endTime = time.time()
             different_time = endTime-startTime
+            time_report_folder = '/home/dell/zjy/VulsTotal/TimeReport'
+            SUPER_time_report = os.path.join(time_report_folder,'SUPER_time_record.txt')
+            with open(SUPER_time_report,'a+') as file:
+                file.write(os.path.basename(apk_abs_path[i])+': '+ str(different_time) + '\n')
 
             time.sleep(2)
             if (operator.contains(err,'application analysis failed')):
-                logging.warning('application analysis failed')
+                logger.warning(' \033[1;31m[SUPER] Application analysis failed. \033[0m')
                 continue
             if ('there was an error in the configuration' in err):
-                logging.warning('application analysis failed')
+                logger.warning(' \033[1;31m[SUPER] Application analysis failed. \033[0m')
                 continue
             if not (pattern.findall(err)):
                 time.sleep(2)
-                logging.warning('[super]dont have package name,need to find results.json directly.')
+                logger.warning(' [SUPER] The Application dont have package name, need to find results.json directly. \033[0m')
                 apk_name = os.path.splitext(apk_name_list[i])[0]
                 report_json_path_old = os.path.join(super_report_folder,'results.json')
                 report_json_folder = os.path.join(apk_target_folder,apk_name)
@@ -95,9 +102,6 @@ def apk_file_change(apk_scan_file, super_report_folder, apk_target_folder):
                 report_json_path_new = os.path.join(
                     report_json_folder,
                     apk_name + '_super.json')
-                # print(report_json_path_old)
-                # print(report_json_path_new)
-                # shutil.copyfile(report_json_path_old,report_json_path_new)
                 os.rename(report_json_path_old, report_json_path_new)
                 super_report_path_total.append(report_json_path_new)
                 time.sleep(1)
@@ -105,32 +109,41 @@ def apk_file_change(apk_scan_file, super_report_folder, apk_target_folder):
                 time.sleep(2)
                 packagename = pattern1.findall(err)[0]
                 apk_name = os.path.splitext(apk_name_list[i])[0]    
-                # print(apk_name_list[i])
                 report_json_path_old = os.path.join(super_report_folder,packagename, 'results.json')
                 report_json_folder = os.path.join(apk_target_folder,apk_name)
                 if not (os.path.exists(report_json_folder)):
                     os.mkdir(report_json_folder)
                 report_json_path_new = os.path.join(report_json_folder,apk_name+ '_super.json')
-                print(report_json_path_old)
-                print(report_json_path_new)
 
                 os.rename(report_json_path_old, report_json_path_new)
                 super_report_path_total.append(report_json_path_new)
-                #it is not sure that all apks dont have warn tips
+
             super_data_pro(report_json_path_new)
     
         except Exception as e:
-            logging.critical('[super]the app has something wrong---'+str(apk_abs_path[i]) +'_' +str(e))
-            traceback.print_exc()
+            logger.critical('\033[1;31m [SUPER] The app has something wrong in '+str(apk_abs_path[i]) +'')
     
+    logger.info(' [SUPER] SUPER scanning is finished ! ')
+
+    current_path = os.path.dirname(os.path.abspath(__file__))
+    results = os.path.join(current_path,'results')
+    dist = os.path.join(current_path,'dist')
+    if (os.path.exists(results)):
+        shutil.rmtree(results)
+    if (os.path.exists(dist)):
+        shutil.rmtree(dist)
+    logger.debug(' [SUPER] Del the source code folder from SUPER.')
+
+
+
+
     return super_report_path_total
 
 
 def super_data_pro(super_jsonreport_path):
-    #对文件格式进行调整
     # for i in range(len(super_jsonreport_path)):
     try:
-        logging.info('Process file format for apk: ' +str(super_jsonreport_path.split('/')[-1]))
+        logger.debug(' [SUPER] Process file format in: ' +str(super_jsonreport_path.split('/')[-1])+'')
         super_report_file = open(super_jsonreport_path, 'r')
         super_json_context = super_report_file.read()
         super_json_dict = json.loads(super_json_context)
@@ -193,7 +206,7 @@ def super_data_pro(super_jsonreport_path):
         with open (ausera_desc_file,'w+') as f:
             f.write(str(super_spec_code))
     except Exception as e:
-        logging.critical("[Super]something happened!!"+str(super_jsonreport_path)+'___' + repr(e))
+        logger.critical("\033[1;31m [Super] Something happened!!"+str(super_jsonreport_path)+'')
 
 
 

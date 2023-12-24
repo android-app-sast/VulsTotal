@@ -7,42 +7,44 @@ import sys
 import subprocess
 import logging
 import traceback
-import logging
+# from common_logger import logger
+from util import logger
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
-# logging.basicConfig(filename='unifiedc_framework.log', level=logging.INFO)
-file_handler = logging.FileHandler('unifiedc_framework.log')
-logger = logging.getLogger('unifiedc_framework') 
-logger.addHandler(file_handler)
 
 
 def speck_scan(speck_apk_path, speck_final_path):
     try:
-        current_folder = os.path.dirname(os.getcwd())
+        current_folder = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         speck_file = os.path.join(current_folder,'SPECK/server/Scan.py')
         speck_cmd = 'python3 '+ speck_file + ' -s ' + speck_apk_path
-        # print('speck_apk_path: ' + speck_apk_path)
+        print(speck_cmd)
         apk_name  = os.path.basename(speck_apk_path)
         speck_apk_name = os.path.splitext(apk_name)[0]
         speck_report_path = os.path.join(speck_final_path, speck_apk_name)
         if not (os.path.exists(speck_report_path)):
             os.mkdir(speck_report_path)
-
+        strat_time = time.time()
         p = subprocess.Popen(speck_cmd,
                             stdout=subprocess.PIPE,
                             stderr=subprocess.PIPE,
                             stdin=subprocess.PIPE,
                             shell=True)
         (output, err) = p.communicate()
-        
+        end_time = time.time()
+        timedifferece = end_time - strat_time
+        time_report_folder = '/home/dell/zjy/VulsTotal/TimeReport'
+        SPECK_time_report = os.path.join(time_report_folder,'SPECK_time_record.txt')
+        with open(SPECK_time_report,'a+') as file:
+            file.write(speck_apk_name+': '+ str(timedifferece) + '\n')
+
         linenew = []
         matchPattern = re.compile(r'analysed')
         matchPattern_1 = re.compile(r'RULE')
         speck_report_txt_file = os.path.join(speck_report_path,
                                             speck_apk_name + "_speak.txt")
         speck_file = open(speck_report_txt_file, 'w+')
-        # print(speck_file.encoding)
         if('INFO  - loading ...' in output):
             for line in output.splitlines():
                 line2 = line.replace('[0m', '').replace('[37m', '').replace(
@@ -56,7 +58,6 @@ def speck_scan(speck_apk_path, speck_final_path):
                 else:
                     linenew.append(line2)
             for i in range(len(linenew)):
-                #print(linenew[i])
                 speck_file.write(linenew[i])
                 speck_file.write('\n')
             speck_file.close()
@@ -82,17 +83,13 @@ def speck_file_pro(speck_report_txt_file):
     flag = 0
     if ('INFO  - loading' in context):
         for i in range(len(speck_context)):
-            # print(speck_context)
             if ("RULE: " in speck_context[i]):
                 rule_index.append(i)
 
-        # if(flag == 0):
-        #     print(speck_report_txt_file)
 
         for i in range(len(rule_index) - 1):
             speck_rule_context.append(speck_context[rule_index[i]:rule_index[i +
                                                                             1]])
-        # print(speck_context[rule_index[-1]:])    
 
         speck_rule_context.append(speck_context[rule_index[-1]:])
         for i in reversed(range(len(speck_rule_context))):
@@ -129,6 +126,7 @@ def speck_file_pro(speck_report_txt_file):
 
 
 def speck_batch(speck_apks_path, speck_final_path):
+    logger.info(' [SPECK] Now begin to scan apks using [SPECK] !')
     
     speck_apks_list = os.listdir(speck_apks_path)
     report_path = []
@@ -144,26 +142,15 @@ def speck_batch(speck_apks_path, speck_final_path):
             os.mkdir(report_file)
         tree = os.listdir(report_file)
         if speck in tree:
-            # print(tree)
-            # print(speck)
             del speck_apks_list[i]
-    
-    print(len(speck_apks_list))
-    # del speck_apks_list[0:4]
+    # del speck_apks_list[0:18]
     for i in range(len(speck_apks_list)):
         try:
-            begin_time = time.time()
             speck_apks_list[i] = os.path.join(speck_apks_path, speck_apks_list[i])
-            # print(speck_apks_list[i])
-            logging.info('Now begin to scan apks using Speck!'+'('+str(i+1)+'/'+str(len(speck_apks_list))+')')
-            print(speck_apks_list[i])
+            logger.info(' [SPECK] Scanning process: '+str(i+1)+'/'+str(len(speck_apks_list))+' : ' + os.path.basename(speck_apks_list[i]))
             speck_report_txt_file = speck_scan(speck_apks_list[i],speck_final_path)
-            # logging.info('Speck scanning is finished ! ')
-            end_time = time.time()
-            different_time =  end_time - begin_time
 
             speck_rule_context_fin,speck_rule29_desc = speck_file_pro(speck_report_txt_file)
-            # print(speck_rule29_desc)
             for j in range(len(speck_rule_context_fin)):
                 speck_rule_context_fin[j] = speck_rule_context_fin[j].encode('ascii')
 
@@ -175,7 +162,9 @@ def speck_batch(speck_apks_path, speck_final_path):
             with open (ausera_desc_file,'w+') as f:
                 f.write(str(speck_rule29_desc))
         except Exception as e:
-            logging.critical("[Speck]something happened in speck!___"+speck_apks_list[i]+'___'+repr(e))
-            traceback.print_exc()
+            logger.critical(" [Speck] Something happened in Speck!___"+speck_apks_list[i]+'')
+            # traceback.print_exc()
+    logger.info(' [SPECK] SPECK scanning is finished ! ')
+
     
     

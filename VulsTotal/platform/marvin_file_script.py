@@ -6,14 +6,15 @@ import re
 import logging
 import ast
 import traceback
-
+# from common_logger import logger
+from util import logger
 
 
 def marvine_pro(marvine_apks_path,marvin_report_folder,i,j):
     #marvine_apks_path = ../apk/apk.apk
     try:
-        logging.info('Now begin to scan apks using Marvin!'+'('+str(i+1)+'/'+str(j)+')')
-        marvin_folder = os.path.dirname(os.getcwd())
+        logger.info(' [Marvin] Scanning process: '+str(i+1)+'/'+str(j)+' : '+os.path.basename(marvine_apks_path))
+        marvin_folder = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         marvin_folder = os.path.join(marvin_folder,'Marvin-static-Analyzer-master')
         os.chdir(marvin_folder)
         marvin_file = os.path.join(marvin_folder,'MarvinStaticAnalyzer.py')
@@ -29,6 +30,13 @@ def marvine_pro(marvine_apks_path,marvin_report_folder,i,j):
         app_name = os.path.splitext(app_name)[0]
         t_end = time.time()
         timedifferece = t_end - t_begintime
+        time_report_folder = '/home/dell/zjy/VulsTotal/TimeReport'
+        Marvine_time_report = os.path.join(time_report_folder,'Marvine_time_record.txt')
+        with open(Marvine_time_report,'a+') as file:
+            file.write(app_name+': '+ str(timedifferece) + '\n')
+
+
+
 
         marvin_report_file = os.path.join(marvin_report_folder,app_name, app_name + '_marvin.txt')
         f = open(marvin_report_file, 'w+')
@@ -37,7 +45,7 @@ def marvine_pro(marvine_apks_path,marvin_report_folder,i,j):
         # f.write(err)
         f.close()
 
-        # logging.info('Marvin scanning is finished ! '+str(marvine_apks_path))
+        # logger.info('Marvin scanning is finished ! '+str(marvine_apks_path))
         # output_apk_scan = output.split('cd')
         pattern = re.compile('\{.*\}')
         single_output  = pattern.findall(output)
@@ -61,8 +69,8 @@ def marvine_pro(marvine_apks_path,marvin_report_folder,i,j):
         with open (ausera_desc_file,'w+') as f:
             f.write(str(marvin_value_name))
     except Exception as e :
-        logging.critical('something wrong happened!____' + str(marvine_apks_path)+'____'+repr(e))
-        traceback.print_exc()
+        logger.critical('something wrong happened!____' + str(marvine_apks_path)+'____'+repr(e))
+        # traceback.print_exc()
     
 
 def marvine_file_gener(marvine_apks_path, marvin_total_vuln,marvin_vuln_desc,
