@@ -2,7 +2,7 @@
 
 VulsTotal: A Unified Platform for Evaluating SAST Tools for Android.
 
-The platform combines the detection capability of 11 select SAST tools for Android and finally generates a comprehensive detection report (CSV file) for the target APK.
+The platform combines the detection capability of 11 selected SAST tools for Android and finally generates a comprehensive detection report (CSV file) for the target APK.
 
 The 11 selected SAST tools for Android are:
 
