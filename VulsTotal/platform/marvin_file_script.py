@@ -30,7 +30,7 @@ def marvine_pro(marvine_apks_path,marvin_report_folder,i,j):
         app_name = os.path.splitext(app_name)[0]
         t_end = time.time()
         timedifferece = t_end - t_begintime
-        time_report_folder = '/home/dell/zjy/VulsTotal/TimeReport'
+        time_report_folder = 'VulsTotal/TimeReport'
         Marvine_time_report = os.path.join(time_report_folder,'Marvine_time_record.txt')
         with open(Marvine_time_report,'a+') as file:
             file.write(app_name+': '+ str(timedifferece) + '\n')
