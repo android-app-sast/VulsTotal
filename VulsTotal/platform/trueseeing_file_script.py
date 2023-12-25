@@ -43,7 +43,7 @@ def trueseeing_run(folder_path,report_folder):
                 content, err = p.communicate()
                 end_time = time.time()
                 timedifferece = end_time - start_time
-                time_report_folder = '/home/dell/zjy/VulsTotal/TimeReport'
+                time_report_folder = 'VulsTotal/TimeReport'
                 APKHunt_time_report = os.path.join(time_report_folder,'Trueseeing_time_record.txt')
                 # with open(APKHunt_time_report,'a+') as file:
                 #     file.write(apk_list[i]+': '+ str(timedifferece) + '\n')
