@@ -65,12 +65,6 @@ def jaadas_scan(jaadas_apk_path, jaadas_report_file):
         output = log_1.read()
         t_ending = time.time()
         different_time = t_ending-t_beginning
-        time_report_folder = '/home/dell/zjy/VulsTotal/TimeReport'
-        JAADAS_time_report = os.path.join(time_report_folder,'JAADAS_time_record.txt')
-        with open(JAADAS_time_report,'a+') as file:
-            file.write(jaadas_apk_name+': '+ str(different_time) + '\n')
-        
-
 
         log_1.close()
         log_2.close()
