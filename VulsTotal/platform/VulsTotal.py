@@ -404,7 +404,6 @@ def corresponding_overlap(apk_name, AUSERA_single_vlun, Androbugs_single_vlun,
     Trueseeing_vuln = []
     DroidStatx_vuln = []
 
-    print("-----------------对应apkname: "+ apk_name+"------------------------------")
     if not (AUSERA_single_vlun==[0]):
         # print("----------------------------tool name---------AUSERA---------------------------------------------------")
         for j in reversed(range(len(AUSERA_single_vlun))):
