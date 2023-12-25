@@ -47,7 +47,7 @@ def droidstatx_run(folder_path,report_folder):
             apk_report_folder = os.path.join(report_folder,apk_name)
             if not (os.path.exists(apk_report_folder)):
                 os.mkdir(apk_report_folder)
-            out_report_folder = '/home/dell/zjy/VulsTotal/droidstatx-master/output_txt'
+            out_report_folder = 'VulsTotal/droidstatx-master/output_txt'
             src_file = os.path.join(out_report_folder,apk_name+'_droidstatx.txt')
             des_file = os.path.join(apk_report_folder,apk_name+'_droidstatx.txt')
             print(src_file)
