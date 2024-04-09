@@ -88,11 +88,6 @@ This file contains 11 tools uniquely supported vulnerability types.
 | Vulnerability Type Name                                     |
 | ----------------------------------------------------------- |
 | Low number of iterations of PBE ==>CRYPTOGRAPHY             |
-| Has a hardcoded Twitter consumer secret key ==>CRYPTOGRAPHY |
-| Has a hardcoded SMTP password ==>CRYPTOGRAPHY               |
-| Has a hardcoded key ==>CRYPTOGRAPHY                         |
-| Password based encryption has a hardcoded ==>CRYPTOGRAPHY   |
-| Has Apache credentials hardcoded ==>CRYPTOGRAPHY            |
 | AUTOCOMPLETE_PASSWORD_INPUT                                 |
 | SURREPTITIOUS_SHARING                                       |
 
