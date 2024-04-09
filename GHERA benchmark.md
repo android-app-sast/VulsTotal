@@ -42,7 +42,6 @@ According to the type of vulnerability supported by GHERA and the type of vulner
 | **HighPriority-ActivityHijack-Lean**                        | High Priority Found                          | Unique:  MobSF        |
 | **TaskAffinity-ActivityHijack-Lean**                        | Task Affinity Set                            | Unique:  MobSF        |
 | **TaskAffinity-PhishingAttack-Lean**                        | Task Affinity Set                            | Unique:  MobSF        |
-| **UnpinnedCertificates-MITM-Lean**                          | Bypassed SSL Pinning issue                   | Unique:  MobSF        |
 | **WebViewLoadDataWithBaseUrl-UnauthorizedFileAccess-Lean**  | WebView Insecure URL Loading                 | Overlapped            |
 
 
