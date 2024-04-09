@@ -1,8 +1,6 @@
 # Platform Base (SAST Tools) Selection
 
-To construct a unified platform and thoroughly evaluate the detection capabilities of Android SAST tools, we sought out a diverse set of SAST tools from both academic and industrial domains. 
-
-To gather this information, we primarily searched tools from recent literature and two prominent websites including NIST and Gartner. Then we snowballed from them since they also recommend further lists. 
+To construct a unified platform and thoroughly evaluate the detection capabilities of Android SAST tools, we sought out a diverse set of SAST tools from both academic and industrial domains. To gather this information, we primarily searched tools from recent literature and two prominent websites including NIST and Gartner. Then we snowballed from them since they also recommend further lists. 
 
 We further retrieved Android SAST tools from GitHub using keywords "Android vulnerability" and "Android static analysis" and sorting them by the number of stars. We aimed to collect tools with 10 or more stars, ensuring the inclusion of relatively popular and widely recognized tools.
 
