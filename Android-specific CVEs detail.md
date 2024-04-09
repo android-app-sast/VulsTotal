@@ -3,6 +3,7 @@
 To construct a comprehensive benchmark aligned with the supported vulnerabilities across 11 tools, covering diverse vulnerability types for a thorough evaluation of Android SAST tools, 
 we further refined 2,033 entries. Based on the taxonomy and the unique vulnerability types supported by each tool, we labeled the corresponding vulnerability types for these CVEs based on their descriptions and supplementary information. 
 To avoid potential bias in the labeling process, detailed information on each CVE was rigorously reviewed and independently labeled by three co-authors. In case of disagreement, the final decision was made by majority voting.
+
 In total, we assigned 2,050 labels to 2,033 CVEs (since a CVE may have multiple vulnerability types) with 1,723 vulnerability labels within the study's scope, while 347 were deemed beyond scope. 
 Based on the identified 2,033 labels, we incorporated them and 46 CVEs without specified application versions into our discussion scope. We categorized these labels (i.e., vulnerability types) into two groups: _**Supported types**_, included in the set of vulnerability types supported by the 11 tools, and **_Unsupported types_**.
 The vulnerability types and the corresponding quantitative details contained in these two categories are shown in the following table.
