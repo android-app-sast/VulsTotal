@@ -115,4 +115,3 @@ This file contains 11 tools uniquely supported vulnerability types.
 | Migrate existing data                  |
 | Deprecated cryptographic functionality |
 | Share data securely across apps        |
-| Use cryptography                       |
