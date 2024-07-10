@@ -11,7 +11,7 @@ from androzoo import androzoo
 
 
 # 替换为你自己的API Key
-API_KEY = "5af51b84f189e6051983d078706a7043da6a4c3014a9a28e74a86c63f34c5fc8"
+API_KEY = 
 
 # 指定下载保存的根目录
 DOWNLOAD_DIR = "/media/dell/WD_BLACK1/androzoo_apk_103"
