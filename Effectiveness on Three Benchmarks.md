@@ -1,21 +1,21 @@
 # Effectiveness on Three Benchmarks
-
 ## CVE-based
-
-|  | MobSF | QARK  | AndroBugs | APKHunt | SUPER | JAADAS | DroidStatx | Marvin | Trueseeing | AUSERA | SPECK |
+| 
+ | QARK | AndroBugs | JAADAS | Marvin | SUPER | MobSF | SPECK | AUSERA | APKHunt | Trueseeing | DroidStatx |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| TP | 82 | 39 | 75 | 139 | 26 | 14 | 55 | 55 | 51 | 96 | 64 |
-| FN | 17 | 28 | 11 | 12 | 41 | 5 | 8 | 35 | 10 | 17 | 3 |
-| Recall of CVE-based | 82.8% | 58.2% | 87.2% | 92.1% | 38.8% | 73.7% | 87.3% | 61.1% | 83.6% | 85.0% | 95.5% |
-| # Supported Vulnerability Cases | 99 | 67 | 86 | 151 | 67 | 19 | 63 | 90 | 61 | 113 | 67 |
+| TP | 96 | 158 | 39 | 124 | 57 | 123 | 101 | 183 | 242 | 68 | 126 |
+| FN | 45 | 12 | 6 | 43 | 52 | 22 | 9 | 21 | 13 | 11 | 10 |
+| B_Recall of CVE-based | 68.09% | 92.94% | 86.67% | 74.25% | 52.29% | 84.83% | 91.82% | 89.71% | 94.90% | 86.08% | 92.65% |
+| # Supported Vulnerability Cases | 141 | 170 | 45 | 167 | 109 | 145 | 110 | 204 | 255 | 79 | 136 |
 
 ## CVE-U
-|  | MobSF | QARK  | AndroBugs | APKHunt | SUPER | JAADAS | DroidStatx | Marvin | Trueseeing | AUSERA | SPECK |
+| 
+ | QARK  | AndroBug | JAADAS | Marvine | SUPER | MobSF | SPECK | AUSERA | APKHunt | Trueseeing | DroidStatx |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| TP | 33 | 13 | 30 | 57 | 13 | 9 | 24 | 19 | 13 | 44 | 27 |
-| FN | 12 | 20 | 6 | 8 | 21 | 3 | 4 | 18 | 8 | 9 | 2 |
-| Recall of CVE_U | 73.3% | 39.4% | 83.3% | 87.7% | 38.2% | 75.0% | 85.7% | 51.4% | 61.9% | 83.0% | 93.1% |
-| # Supported Vulnerability Cases | 45 | 33 | 36 | 65 | 34 | 12 | 28 | 37 | 21 | 53 | 29 |
+| TP | 14 | 31 | 9 | 20 | 14 | 34 | 27 | 47 | 58 | 14 | 25 |
+| FN | 21 | 6 | 3 | 18 | 22 | 11 | 2 | 9 | 8 | 8 | 4 |
+| B_Recall of CVE_U | 40.00% | 83.78% | 75.00% | 52.63% | 38.89% | 75.56% | 93.10% | 83.93% | 87.88% | 63.64% | 86.21% |
+| # Supported Vulnerability Cases | 35 | 37 | 12 | 38 | 36 | 45 | 29 | 56 | 66 | 22 | 29 |
 
 ## MSTG&PIVAA
 |  | MobSF | QARK | AndroBugs | APKHunt | SUPER | JAADAS | DroidStatx | Marvin | Trueseeing | AUSERA | SPECK |
@@ -26,14 +26,16 @@
 | # Supported Vulnerability Cases | 19 | 3 | 16 | 24 | 16 | 2 | 11 | 14 | 10 | 22 | 14 |
 
 ## GHERA
-|  | MobSF | QARK  | AndroBugs | APKHunt | SUPER | JAADAS | DroidStatx | Marvin | Trueseeing | AUSERA | SPECK |
+| 
+ | QARK  | AndroBugs | JAADAS | Marvin | SUPER | MobSF | SPECK | AUSERA | APKHunt | Trueseeing | DroidStatx |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| TP | 12 | 4 | 11 | 24 | 4 | 6 | 11 | 11 | 5 | 19 | 7 |
-| FN | 6 | 9 | 4 | 4 | 8 | 3 | 2 | 7 | 2 | 2 | 6 |
-| FP | 6 | 2 | 3 | 19 | 2 | 2 | 4 | 3 | 3 | 6 | 4 |
-| TN | 12 | 11 | 12 | 9 | 10 | 7 | 9 | 15 | 4 | 15 | 9 |
-| Precision | 66.7% | 66.7% | 78.6% | 55.8% | 66.7% | 75.0% | 73.3% | 78.6% | 62.5% | 76.0% | 63.6% |
-| Recall | 66.7% | 30.8% | 73.3% | 85.7% | 33.3% | 66.7% | 84.6% | 61.1% | 71.4% | 90.5% | 53.8% |
-| F1-score | 66.7% | 42.1% | 75.9% | 67.6% | 44.4% | 70.6% | 78.6% | 68.8% | 66.7% | 82.6% | 58.3% |
-| # Supported Vulnerability Cases | 18 | 13 | 15 | 28 | 12 | 9 | 13 | 18 | 7 | 21 | 13 |
+| TP | 4 | 11 | 6 | 11 | 4 | 12 | 7 | 19 | 24 | 5 | 11 |
+| FN | 9 | 4 | 3 | 7 | 8 | 6 | 6 | 2 | 4 | 2 | 2 |
+| FP | 2 | 3 | 2 | 3 | 2 | 6 | 4 | 6 | 19 | 3 | 4 |
+| TN | 11 | 12 | 7 | 15 | 10 | 12 | 9 | 15 | 9 | 4 | 9 |
+| Precision | 66.7% | 78.6% | 75.0% | 78.6% | 66.7% | 66.7% | 63.6% | 76.0% | 55.8% | 62.5% | 73.3% |
+| Recall | 30.8% | 73.3% | 66.7% | 61.1% | 33.3% | 66.7% | 53.8% | 90.5% | 85.7% | 71.4% | 84.6% |
+| F1-score | 42.1% | 75.9% | 70.6% | 68.8% | 44.4% | 66.7% | 58.3% | 82.6% | 67.6% | 66.7% | 78.6% |
+| FPR | 15.4% | 20.0% | 22.2% | 16.7% | 16.7% | 33.3% | 30.8% | 28.6% | 67.9% | 42.9% | 30.8% |
+| # Supported Vulnerability Cases | 26 | 30 | 18 | 36 | 24 | 36 | 26 | 42 | 56 | 14 | 26 |
 

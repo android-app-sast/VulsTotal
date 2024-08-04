@@ -1,13 +1,10 @@
 # Android-specific CVEs detail
-
 To construct a comprehensive benchmark aligned with the supported vulnerabilities across 11 tools, covering diverse vulnerability types for a thorough evaluation of Android SAST tools, 
 we further refined 2,033 entries. Based on the taxonomy and the unique vulnerability types supported by each tool, we labeled the corresponding vulnerability types for these CVEs based on their descriptions and supplementary information. 
 To avoid potential bias in the labeling process, detailed information on each CVE was rigorously reviewed and independently labeled by three co-authors. In case of disagreement, the final decision was made by majority voting.
-
-In total, we assigned 2,050 labels to 2,033 CVEs (since a CVE may have multiple vulnerability types) with 1,723 vulnerability labels within the study's scope, while 347 were deemed beyond scope. 
-Based on the identified 2,033 labels, we incorporated them and 46 CVEs without specified application versions into our discussion scope. We categorized these labels (i.e., vulnerability types) into two groups: _**Supported types**_, included in the set of vulnerability types supported by the 11 tools, and **_Unsupported types_**.
+In total, we assigned 2,050 labels to 2,033 CVEs (since a CVE may have multiple vulnerability types) with 1,722 vulnerability labels within the study's scope, while 328 were deemed beyond scope. 
+Based on the identified 2,050 labels, we incorporated them and 46 CVEs without specified application versions (involving 47 labels) into our discussion scope. We categorized these labels (i.e., vulnerability types) into two groups: _**Supported types**_, included in the set of vulnerability types supported by the 11 tools, and **_Unsupported types_**.
 The vulnerability types and the corresponding quantitative details contained in these two categories are shown in the following table.
-
 #### Supported Vulnerability Type
 | **_Vulnerability Type Name_** | **_CVE Num_** |
 | --- | --- |
@@ -16,10 +13,10 @@ The vulnerability types and the corresponding quantitative details contained in 
 | Using HTTP Issue | 34 |
 | Exported Not Protected Components | 28 |
 | Webview JavaScript Execution | 23 |
-| Logging Data Exposure  | 23 |
-| External/Internal Data Exposure  | 20 |
+| Logging Data Exposure | 23 |
+| External/Internal Data Exposure | 20 |
 | Misuse Implicit Intent Issue | 18 |
-| Custom URL Scheme Issue  | 15 |
+| Custom URL Scheme Issue | 15 |
 | SQL Injection | 9 |
 | Misuse Empty Pending Intent Issue | 9 |
 | Webview Local File Access | 6 |
@@ -28,9 +25,9 @@ The vulnerability types and the corresponding quantitative details contained in 
 | SQLite Data Exposure | 4 |
 | ContentProvider Permissions Issue | 3 |
 | WebView Insecure  URL Loading | 3 |
-| Improper Handle AES Encryption  | 3 |
+| Improper Handle AES Encryption | 3 |
 | Webview Java Objects Exposure | 2 |
-| Improper Handle DES Encryption  | 2 |
+| Improper Handle DES Encryption | 2 |
 | Improper Handle Insecure Hash | 2 |
 | Use Insecure Random | 2 |
 | Task Affinity Issue | 2 |
@@ -49,7 +46,6 @@ The vulnerability types and the corresponding quantitative details contained in 
 | Cache Data Disclosure | 1 |
 
 #### Unsupported Vulnerability Type
-
 | **_Vulnerability Type Name_** | **_CVE Num_** |
 | --- | --- |
 | Inadequate Authentication and Authorization | 39 |
