@@ -1,3 +1,4 @@
+# Mapping of Unsupported types to OWASP in GHERA and MSTG&PIVAA
 We mapped the unsupported vulnerability types by any of the selected tools in GHERA and MSTG&PIVAA to the OWASP Mobile Top 10 2024 and found that they all correspond to at least one category in the OWASP Top 10.
 It is noteworthy that each threat in the OWASP Top 10 encompasses a range of specific vulnerability types. Therefore, even if certain types in these benchmarks are not covered by any tools, it does not necessarily mean that the corresponding Top 10 threats are neglected, as other related vulnerabilities are still supported by the tools.
 The mapping table is as follows.
