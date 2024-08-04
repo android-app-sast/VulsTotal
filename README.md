@@ -22,6 +22,7 @@ The 11 selected SAST tools for Android are:
 
 ## Introduction of Project Components
 
+- [_VulsTotal_](https://github.com/android-app-sast/VulsTotal/tree/master/Vulstotal): Source code for the VulsTotal platform.
 - [_SAST tools selection.md_](https://github.com/android-app-sast/VulsTotal/blob/master/SAST%20Tools%20Selection.md): Details for selecting the 11 selected tools.
 - [_GHERA benchmark.md_](https://github.com/android-app-sast/VulsTotal/blob/master/GHERA%20benchmark.md): Includes the GHERA benchmark.
 - [_MSTG&PIVAA benchmark.md_](https://github.com/android-app-sast/VulsTotal/blob/master/MSTG%26PIVAA%20benchmark.md): Includes the MSTG&PIVAA benchmark.
