@@ -56,6 +56,6 @@ optional arguments:
   -f, 	--confidence  		The confidence option (please in the number in [50,100)
 ```
 
-## Web Sevice Coming Soon
-In our ongoing efforts to enhance user experience, we have developed a web service designed to streamline and enrich interaction with our platform. Interested users are welcome to use！
-![VulsTotal.png](<img width="1500" alt="image" src="https://github.com/user-attachments/assets/112ea5f3-baf2-46ae-a451-d99ece9e2b50">)
+## Web Sevice Coming!
+In our ongoing efforts to enhance user experience, we have developed a web service designed to streamline and enrich interaction with our platform. After undergoing comprehensive testing to ensure reliability and functionality, this service already have made available to the public!
+![image.png](https://cdn.nlark.com/yuque/0/2024/png/28458590/1724320486469-81820845-c027-4e51-8b92-c63a8fd172ee.png#averageHue=%23fdfdfd&clientId=u409f8435-2c56-4&from=paste&height=822&id=uf0166c57&originHeight=1644&originWidth=3000&originalType=binary&ratio=2&rotation=0&showTitle=false&size=198975&status=done&style=none&taskId=ue8792630-353d-4bd7-ab06-834bb788b72&title=&width=1500)
