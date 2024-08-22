@@ -58,5 +58,5 @@ optional arguments:
 
 ## Web Sevice Coming!
 In our ongoing efforts to enhance user experience, we have developed a web service designed to streamline and enrich interaction with our platform. After undergoing comprehensive testing to ensure reliability and functionality, this service already have made available to the public!
-Visit the website at vulstotal.com and you can use it right away. If you encounter any issues during the process, please feel free to raise an issue at GitHub.
+Visit the website at [](vulstotal.com) and you can use it right away. If you encounter any issues during the process, please feel free to raise an issue at GitHub.
 ![image.png](https://cdn.nlark.com/yuque/0/2024/png/28458590/1724320486469-81820845-c027-4e51-8b92-c63a8fd172ee.png#averageHue=%23fdfdfd&clientId=u409f8435-2c56-4&from=paste&height=822&id=uf0166c57&originHeight=1644&originWidth=3000&originalType=binary&ratio=2&rotation=0&showTitle=false&size=198975&status=done&style=none&taskId=ue8792630-353d-4bd7-ab06-834bb788b72&title=&width=1500)
