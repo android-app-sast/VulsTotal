@@ -1,0 +1,88 @@
+Overlap for all tools !,,,,,,,,,,,
+,QARK,AndroBugs,JAADAS,Marvin,SUPER,MobSF,SPECK,AUSERA,APKHunt,Trueseeing,DroidStatx
+WebView password leakage,0/0,0/0,1/1,0/1,0/0,0/0,0/0,0/1,0/0,0/0,0/0
+Logging data leakage,0/0,0/0,0/0,0/0,0/1,0/1,0/0,0/1,1/1,1/1,0/0
+SD card/Internal data leakage,0/0,0/1,0/0,0/0,0/1,0/1,0/1,0/1,1/1,0/0,0/0
+Cache Data Exposure,0/0,0/0,0/0,0/0,0/0,0/0,0/1,0/0,1/1,0/0,0/0
+Using Temp file issue,0/0,0/0,0/0,0/0,0/1,0/1,0/0,0/1,0/1,0/0,0/0
+SQLite Data Exposure,0/0,0/0,0/0,0/0,0/0,0/0,0/0,0/1,0/1,0/0,0/0
+SMS data leakage,0/0,0/1,0/0,0/0,0/1,0/1,0/1,0/1,0/0,0/1,0/0
+Clipboard Data Exposure,0/0,0/0,0/0,0/0,0/0,0/1,0/0,0/0,0/1,0/0,0/0
+Hardcoded IP Exposure,0/0,0/0,0/0,0/0,0/1,0/1,0/0,0/0,0/1,0/1,0/0
+Hardcoded Email Exposure,0/0,0/0,0/0,0/0,0/1,0/0,0/0,0/0,0/1,0/0,0/0
+Device ID Exposure,0/0,0/1,0/0,0/0,0/1,0/0,0/0,0/0,0/0,0/1,0/0
+Android ID Exposure,0/0,0/1,0/0,0/0,0/0,0/0,0/0,0/0,0/0,0/1,0/0
+Hardcoded URL Exposure,0/0,0/0,0/0,0/0,0/1,0/0,0/0,0/0,1/1,1/1,0/0
+Hardcoded Sensitive Data Exposure,0/0,0/0,0/0,0/1,0/0,0/1,0/0,0/0,0/1,0/1,0/0
+Base64 encryption issue,0/0,0/1,0/0,0/0,0/1,0/0,0/0,0/1,0/0,0/0,0/0
+Blowfish encryption issue,0/0,0/0,0/0,0/0,0/0,0/1,0/0,0/1,0/0,0/0,0/0
+DES encryption misuse,0/1,0/0,0/0,0/1,0/1,0/1,0/1,0/1,0/1,0/1,0/1
+AES encryption misuse,0/1,0/0,0/0,0/1,0/1,0/1,0/1,0/1,0/1,0/1,0/1
+RSA encryption misuse,0/0,0/0,0/1,0/0,0/1,0/1,0/1,0/1,0/0,0/0,0/0
+Improper Handle RC4 Encryption,0/0,0/0,0/0,0/1,0/0,0/1,0/0,0/0,0/1,0/0,0/0
+Improper Handle Insecure Hash Function,0/0,0/0,0/0,0/1,0/1,0/1,0/1,0/1,0/1,0/0,0/0
+Insecure SecureRandom issue,0/0,0/0,0/0,0/1,0/1,0/1,0/1,0/1,0/1,0/0,0/0
+Weak CBC Cipher Modes,0/0,0/0,0/0,0/0,0/0,0/1,0/0,0/0,0/1,0/0,0/0
+Hardcoded IV Issue,0/0,0/0,0/0,0/1,0/0,0/1,0/0,0/0,0/1,0/0,0/0
+Improper Handle Package Hardcoded,0/1,0/1,0/0,0/0,0/1,0/1,0/0,0/1,0/1,0/0,0/1
+Empty Pending Intent,0/1,0/0,0/0,0/0,0/0,0/0,0/0,0/1,0/0,0/0,0/0
+Dynamically registered Receiver issue,0/0,0/0,0/0,1/1,0/0,0/0,0/0,0/1,0/0,0/0,1/1
+Implicit Intent issue,0/0,0/0,0/1,0/1,0/0,0/0,1/1,0/1,1/1,0/0,0/0
+Exported not protected components,1/1,0/1,0/0,0/1,1/1,0/1,0/1,1/1,0/1,1/1,1/1
+Exported not protected Content Provider,0/1,0/1,0/0,0/1,0/1,0/1,0/1,0/1,0/1,0/1,0/1
+Sticky broadcast intent,0/1,0/0,0/0,0/1,0/0,0/0,0/0,0/0,0/0,0/0,0/0
+improper provider permission,0/1,0/0,0/0,0/0,0/0,0/1,0/0,0/0,0/0,0/0,0/0
+Screenshot harvest,0/0,1/1,0/0,0/0,0/0,1/1,0/0,1/1,0/1,0/0,1/1
+Backup issue,0/1,0/1,0/1,0/1,0/1,0/1,0/0,0/1,1/1,0/1,1/1
+Debug issue,1/1,1/1,1/1,0/1,1/1,1/1,0/0,1/1,1/1,1/1,1/1
+MODE READABLE,0/1,0/1,0/1,0/1,0/1,0/1,0/1,0/1,0/1,1/1,0/0
+MODE WRITABLE,0/1,0/1,0/1,0/1,0/1,0/1,0/1,0/1,0/1,1/1,0/0
+Sensitive functionality (DexClassLoader),0/0,0/1,0/0,0/1,0/0,0/0,0/1,0/1,0/0,0/0,0/0
+Sensitive functionality (getRuntime.exec),0/0,0/1,0/0,0/1,0/1,0/0,0/0,0/1,0/1,0/0,0/0
+Rooted device detection,0/0,0/1,0/0,0/0,0/1,0/1,0/0,0/0,0/1,0/1,0/0
+Super user privileges,0/0,0/0,0/0,0/0,0/1,0/1,0/0,0/0,0/0,0/0,0/0
+Sensitive functionality (loadLibrary),0/0,0/1,0/0,0/0,0/0,0/0,0/0,0/1,0/0,0/1,0/0
+SQL injection,0/0,0/0,0/0,0/0,0/1,0/1,0/1,0/1,0/1,0/0,0/1
+Fragment injection,0/0,0/1,0/1,0/1,0/0,0/0,0/0,0/1,0/1,0/0,0/1
+ContentProvider openFile,0/0,0/0,0/0,0/1,0/0,0/0,0/0,0/1,0/0,0/0,0/1
+Use http issue,0/0,0/1,0/0,0/0,0/0,0/0,0/1,0/1,0/1,0/0,0/0
+ClearText Traffic Issue,0/0,0/0,0/0,0/0,0/0,0/1,0/1,0/0,0/1,1/1,0/1
+Configure CAs for debuggding,0/0,0/0,0/0,0/0,0/0,0/1,0/1,0/0,0/0,0/0,0/0
+Use expired certificates,0/0,0/0,0/0,0/0,0/1,0/0,0/0,0/1,0/0,0/0,0/0
+Use SHA1_MD5 certificate,0/0,0/0,0/0,0/0,0/0,0/1,0/0,0/1,0/0,0/0,0/0
+Android Debug Certificate,0/0,0/0,0/0,0/0,0/1,1/1,0/0,0/0,0/0,0/0,0/0
+Insecure  AllowUserCA,0/0,0/0,0/0,0/0,0/0,0/1,0/0,0/0,0/1,1/1,0/1
+Use insecure socket,0/0,0/0,0/0,0/0,0/0,0/0,0/1,0/1,0/0,0/0,0/0
+Use Firebase exposed,0/0,0/0,0/0,0/0,0/0,0/1,0/0,0/0,0/1,0/0,0/0
+Use insecure ssl socket factor,0/0,0/1,0/0,0/1,0/1,0/0,0/0,0/0,0/1,0/0,0/0
+Use invalid hostname verification,0/1,0/1,0/1,0/1,0/0,0/0,0/0,0/1,0/1,0/0,0/1
+Use invalid server verification,0/1,0/1,0/1,0/1,0/0,0/0,0/0,0/1,0/1,0/0,0/1
+Use Allow All Hostname Verification,0/1,0/1,0/1,0/1,0/1,0/1,0/1,0/1,0/1,0/0,0/1
+Webview invalid certificate authentication',0/0,0/1,0/1,0/1,0/1,0/1,0/0,0/0,0/1,0/0,0/1
+Webview sop warning,0/1,0/0,0/1,0/0,0/0,0/0,0/0,0/0,0/0,0/0,0/0
+Webview JavaScript Execution,0/1,1/1,0/0,0/0,0/1,0/1,0/1,0/1,1/1,0/1,1/1
+Webview Java Objectes Exposure,0/1,0/1,0/1,0/1,0/1,0/1,0/1,0/0,0/1,0/1,0/1
+Webview Insecure Load Plugin,0/1,0/0,0/0,0/0,0/0,0/0,0/0,0/1,0/0,0/0,0/0
+WebView local file access,0/1,1/1,1/1,1/1,0/0,0/0,0/0,0/1,1/1,0/0,1/1
+WebView Local File Cleanup,0/0,0/0,0/0,0/0,0/0,0/0,1/1,0/0,0/1,0/0,0/0
+WebView Insecure  URL Loading,0/1,0/0,0/0,0/0,0/0,0/0,0/0,0/0,1/1,0/0,1/0
+WebView Remote Debugging,0/0,0/0,0/0,0/0,0/0,0/1,0/0,0/0,0/1,0/0,0/0
+Uniqe items for all tools !,,,,,,,,,,,
+,QARK,AndroBugs,JAADAS,Marvin,SUPER,MobSF,SPECK,AUSERA,APKHunt,Trueseeing,DroidStatx
+0,This class is exported from a manifest item: MainActivity,,,,Internet permission,Certificate algorithm might be vulnerable to hash collision,,RSA encryption issue,The Custom Permissions,Lack Of Obfuscation,targetSDKVersion
+1,No custom imports to investigate. The method is assumed to be in the standard libraries,,,,,This application has no privacy trackers,,,The potential Cross-Site Scripting flaws,Tamperable Webview,networkSecurityConfig
+2,Backups not enabled.,,,,,Application vulnerable to Janus Vulnerability,,,The Exported service/activity/provider/receiver without permission set,Open Permissions,isMultiDex
+3,"Please use the exploit APK to manually test for TapJacking until we have a chance to complete this module. The impact should be verified manually anyway, so have fun...",,,,,,,,The Exception Handling instances,Detected Path Component,isAppXamarin
+4,"Until we perfect this, for manually testing, run the following command to see all the options and their meanings: adb shell am. Make sure to update qark frequently to get all the enhancements! You'll also find some good examples here: http://xgouchet.fr/android/index.php?article42/launch-intents-using-adb",,,,,,,,The Intents Filters,Detected Library,packageName
+5,,,,,,,,,The Permissions,,isAppReactNative
+6,,,,,,,,,The flush instances utilized for clearing the Memory,,xamarinMKBundled
+7,,,,,,,,,The Custom URL Schemes,,isAppOutsystems
+8,,,,,,,,,,,versionCode
+9,,,,,,,,,,,isAppCordova
+10,,,,,,,,,,,dexFiles
+11,,,,,,,,,,,versionName
+12,,,,,,,,,,,intentFilterList
+13,,,,,,,,,,,minSDKVersion
+14,,,,,,,,,,,sha256
+15,,,,,,,,,,,otherFiles
+16,,,,,,,,,,,permissions
