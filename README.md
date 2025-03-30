@@ -15,6 +15,8 @@ The 11 selected SAST tools for Android are:
 - [AUSERA](https://github.com/tjusenchen/AUSERA)
 - [SPECK](https://github.com/SPRITZ-Research-Group/SPECK)
 
+We are pleased to announce that the VulsTotal platform has introduced an innovative feature - integrating multiple tool detection results based on the mainstream voting algorithm to generate a comprehensive detection report with significantly improved accuracy. This new feature not only inherits the platform's original powerful ability to integrate multiple Android static application security testing (SAST) tools for in-depth analysis, but also further optimizes the accuracy and reliability of the evaluation results through intelligent algorithms.
+
 ## Our Goal
 
 - Evaluate SAST tools for Android.
