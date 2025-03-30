@@ -36,6 +36,10 @@ reload(sys)
 sys.setdefaultencoding('utf8')
 
 def apk_name_handle(apks_folder):
+    safe_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'safe_apks'))
+    apks_folder = os.path.abspath(apks_folder)
+    if not apks_folder.startswith(safe_root):
+        raise Exception("Access to this directory is not allowed")
     apk_name = os.listdir(apks_folder)
     for i in reversed(range(len(apk_name))):
         if not ('.apk' in apk_name[i]):
